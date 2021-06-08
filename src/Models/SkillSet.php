@@ -1,0 +1,59 @@
+<?php
+
+namespace PtuDex\Models;
+
+class SkillSet extends Model
+{
+	public $skills = [];
+
+	public function __construct()
+	{
+		$this->skills = 
+		[
+			new Skill(\Enums\SkillNames::ACROBATICS),
+			new Skill(\Enums\SkillNames::ATHLETICS),
+			new Skill(\Enums\SkillNames::CHARM),
+			new Skill(\Enums\SkillNames::COMBAT),
+			new Skill(\Enums\SkillNames::COMMAND),
+			new Skill(\Enums\SkillNames::GENERAL_EDUCATION),
+			new Skill(\Enums\SkillNames::MEDICINE_EDUCATION),
+			new Skill(\Enums\SkillNames::OCCULT_EDUCATION),
+			new Skill(\Enums\SkillNames::POKEMON_EDUCATION),
+			new Skill(\Enums\SkillNames::TECHNOLOGY_EDUCATION),
+			new Skill(\Enums\SkillNames::FOCUS),
+			new Skill(\Enums\SkillNames::GUILE),
+			new Skill(\Enums\SkillNames::INTIMIDATE),
+			new Skill(\Enums\SkillNames::INTUITION),
+			new Skill(\Enums\SkillNames::PERCEPTION),
+			new Skill(\Enums\SkillNames::STEALTH),
+			new Skill(\Enums\SkillNames::SURVIVAL)
+		];
+	}
+
+	public function getSkill($name) : Skill
+	{
+		if(!\Enums\SkillNames::isConstantValue($name, false))
+			throw new \LogicException("{$name} is not a valid skill name");
+
+		foreach($this->skills as $skill)
+			if($skill->name = $name)
+				return $skill;
+
+		throw new \LogicException("Skill {$name} doesn't exist.");
+	}
+
+	public function setSkill($name, $rank, $modifier) : self
+	{
+		if(!\Enums\SkillNames::isConstantValue($name, false))
+			throw new \LogicException("{$name} is not a valid skill name");
+
+		foreach($this->skills as $skill)
+			if($skill->name = $name)
+			{
+				$skill->rank     = $rank;
+				$skill->modifier = $modifier;
+			}
+
+		return $this;
+	}
+}

@@ -6,7 +6,7 @@ use Engine\Page\Page;
 
 class HomeRoute extends \Engine\Routing\Route
 {
-	protected static string $route = "/";
+	public static string $route = "/";
 
 	public function getPage(): Page
 	{

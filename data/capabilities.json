@@ -1,0 +1,362 @@
+[
+	{
+		"name": "Power",
+		"description": "Power represents a Pokemon or Trainer's physical strength."
+	},
+	{
+		"name": "Throwing Range",
+		"description": ""
+	},
+	{
+		"name": "High Jump",
+		"description": ""
+	},
+	{
+		"name": "Long Jump",
+		"description": ""
+	},
+	{
+		"name": "Burrow",
+		"description": ""
+	},
+	{
+		"name": "Overland",
+		"description": ""
+	},
+	{
+		"name": "Sky",
+		"description": ""
+	},
+	{
+		"name": "Swim",
+		"description": ""
+	},
+	{
+		"name": "Levitate",
+		"description": ""
+	},
+	{
+		"name": "Teleporter",
+		"description": ""
+	},
+	{
+		"name": "Alluring",
+		"description": ""
+	},
+	{
+		"name": "Amorphous",
+		"description": ""
+	},
+	{
+		"name": "Aura Reader",
+		"description": ""
+	},
+	{
+		"name": "Aura Pulse",
+		"description": ""
+	},
+	{
+		"name": "Blindsense",
+		"description": ""
+	},
+	{
+		"name": "Bloom",
+		"description": ""
+	},
+	{
+		"name": "Blender",
+		"description": ""
+	},
+	{
+		"name": "Chilled",
+		"description": ""
+	},
+	{
+		"name": "Confined",
+		"description": ""
+	},
+	{
+		"name": "Darkvision",
+		"description": ""
+	},
+	{
+		"name": "Dead Silent",
+		"description": ""
+	},
+	{
+		"name": "Delta Evolution",
+		"description": ""
+	},
+	{
+		"name": "Dream Mist",
+		"description": ""
+	},
+	{
+		"name": "Dream Reader",
+		"description": ""
+	},
+	{
+		"name": "Egg Warmer",
+		"description": ""
+	},
+	{
+		"name": "Firestarter",
+		"description": ""
+	},
+	{
+		"name": "Forme Change",
+		"description": ""
+	},
+	{
+		"name": "Fortune",
+		"description": ""
+	},
+	{
+		"name": "Fountain",
+		"description": ""
+	},
+	{
+		"name": "Freezer",
+		"description": ""
+	},
+	{
+		"name": "Gardener",
+		"description": ""
+	},
+	{
+		"name": "Gather Unown",
+		"description": ""
+	},
+	{
+		"name": "Gilled",
+		"description": ""
+	},
+	{
+		"name": "Glow",
+		"description": ""
+	},
+	{
+		"name": "Groundshaper",
+		"description": ""
+	},
+	{
+		"name": "Guster",
+		"description": ""
+	},
+	{
+		"name": "Heart Gift",
+		"description": ""
+	},
+	{
+		"name": "Heater",
+		"description": ""
+	},
+	{
+		"name": "Herb Growth",
+		"description": ""
+	},
+	{
+		"name": "Honey Gather",
+		"description": ""
+	},
+	{
+		"name": "Illusionist",
+		"description": ""
+	},
+	{
+		"name": "Inflatable",
+		"description": ""
+	},
+	{
+		"name": "Invisibility",
+		"description": ""
+	},
+	{
+		"name": "Juicer",
+		"description": ""
+	},
+	{
+		"name": "Keystone Warp",
+		"description": ""
+	},
+	{
+		"name": "Leaf Crafter",
+		"description": ""
+	},
+	{
+		"name": "Letter Press",
+		"description": ""
+	},
+	{
+		"name": "Living Weapon",
+		"description": ""
+	},
+	{
+		"name": "Magnetic",
+		"description": ""
+	},
+	{
+		"name": "Marsupial",
+		"description": ""
+	},
+	{
+		"name": "Materializer",
+		"description": ""
+	},
+	{
+		"name": "Milk Collection",
+		"description": ""
+	},
+	{
+		"name": "Mindlock",
+		"description": ""
+	},
+	{
+		"name": "Mindreader",
+		"description": ""
+	},
+	{
+		"name": "Mountable",
+		"description": ""
+	},
+	{
+		"name": "Multiform",
+		"description": ""
+	},
+	{
+		"name": "Mushroom Harvest",
+		"description": ""
+	},
+	{
+		"name": "Naturewalk",
+		"description": ""
+	},
+	{
+		"name": "Origin Forme",
+		"description": ""
+	},
+	{
+		"name": "Pack Mon",
+		"description": ""
+	},
+	{
+		"name": "Pearl Creation",
+		"description": ""
+	},
+	{
+		"name": "Phasing",
+		"description": ""
+	},
+	{
+		"name": "Planter",
+		"description": ""
+	},
+	{
+		"name": "Premonition",
+		"description": ""
+	},
+	{
+		"name": "Reach",
+		"description": ""
+	},
+	{
+		"name": "Shadow Meld",
+		"description": ""
+	},
+	{
+		"name": "Shapeshifter",
+		"description": ""
+	},
+	{
+		"name": "Shrinkable",
+		"description": ""
+	},
+	{
+		"name": "Sky Forme",
+		"description": ""
+	},
+	{
+		"name": "Soulless",
+		"description": ""
+	},
+	{
+		"name": "Split Evolution",
+		"description": ""
+	},
+	{
+		"name": "Sprouter",
+		"description": ""
+	},
+	{
+		"name": "Stealth",
+		"description": ""
+	},
+	{
+		"name": "Sticky Hold",
+		"description": ""
+	},
+	{
+		"name": "Telekinetic",
+		"description": ""
+	},
+	{
+		"name": "Telepath",
+		"description": ""
+	},
+	{
+		"name": "Threaded",
+		"description": ""
+	},
+	{
+		"name": "Tracker",
+		"description": ""
+	},
+	{
+		"name": "Tremorsense",
+		"description": ""
+	},
+	{
+		"name": "Underdog",
+		"description": ""
+	},
+	{
+		"name": "Volatile Bomb",
+		"description": ""
+	},
+	{
+		"name": "Viral Fusion",
+		"description": ""
+	},
+	{
+		"name": "Wallclimber",
+		"description": ""
+	},
+	{
+		"name": "Weathershape",
+		"description": ""
+	},
+	{
+		"name": "Weapon Bond",
+		"description": ""
+	},
+	{
+		"name": "Wielder",
+		"description": ""
+	},
+	{
+		"name": "Wired",
+		"description": ""
+	},
+	{
+		"name": "X-Ray Vision",
+		"description": ""
+	},
+	{
+		"name": "Zapper",
+		"description": ""
+	},
+	{
+		"name": "Zygarde Cells",
+		"description": ""
+	}
+]

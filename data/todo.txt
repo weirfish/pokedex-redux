@@ -1,0 +1,25 @@
+X	Has type(s)
+X	Has only type(s)
+X	Has move in all sets
+X	Has move in learn
+X	Has move in egg
+X	Has move in tmhm
+X	Has move in tutor
+X	Has ability
+X	Has capability
+	Has resistance
+	Has weakness
+X	Has stat compared to number/stat
+X	Has basic ability
+X	Has advanced ability
+X	Has high ability
+	Has capability value compared to number
+	Has number of resistances compared to number
+	Has number of weaknesses compared to number
+	Has number of types in moves compared to number
+	Has number of types in learn moves compared to number
+	Has number of types in egg moves compared to number
+	Has number of types in tmhm moves compared to number
+	Has number of types in tutor moves compared to number
+	Has habitat
+	Has number of STAB moves compared to number
