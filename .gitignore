@@ -1,0 +1,6 @@
+img/
+composer.json
+composer.lock
+phpstan.neon
+vendor/
+.htaccess
