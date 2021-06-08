@@ -1,0 +1,46 @@
+{
+    "name": "PTUDex",
+    "description": "A Pokemon Tabletop United Toolset",
+    "version": "0.1",
+    "type": "package",
+    "autoload": {
+        "psr-4": {
+            "PtuDex\\": "src",
+            "PtuDex\\Test\\": "test"
+        }
+    },
+    "authors": [
+        {
+            "name": "Thomas Pearce",
+            "email": "github@tpearce.net"
+        }
+    ],
+    "require": {
+        "weirweb/engine": "@dev",
+        "weirweb/engine-dice": "@dev",
+        "weirweb/engine-routing": "@dev",
+        "weirweb/engine-page": "@dev"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^0.12.81",
+        "phpunit/phpunit": "^9.5"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../engine"
+        },
+        {
+            "type": "path",
+            "url": "../engine-routing"
+        },
+        {
+            "type": "path",
+            "url": "../engine-page"
+        },
+        {
+            "type": "path",
+            "url": "../engine-dice"
+        }
+    ]
+}
