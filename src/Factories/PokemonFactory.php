@@ -23,8 +23,22 @@ class PokemonFactory extends JsonDrivenFactory
 		$model->tutor_moves  = $this->makeMoveList($data['moves']['hmtm'] ?? []);
 		$model->hmtm_moves   = $this->makeMoveList($data['moves']['tutor'] ?? []);
 		$model->skills       = $this->makeSkillSet($data['skills']);
+		$model->types        = $this->makeTypeSet($data['types']);
 
 		return $model;
+	}
+
+	private function makeTypeSet(array $data) : \PtuDex\Models\PokemonTypeSet
+	{
+		$types = [];
+
+		foreach($data as $type_name)
+		{
+			$types[] = TypeFactory::getInstance()
+			->get($type_name);
+		}
+
+		return new \PtuDex\Models\PokemonTypeSet(...$types);
 	}
 
 	private function makeSkillSet(array $data) : \PtuDex\Models\SkillSet

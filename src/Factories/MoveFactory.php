@@ -139,7 +139,12 @@ class MoveFactory extends JsonDrivenFactory
 
 	public function getMove(string $name) : \PtuDex\Models\Move
 	{
-		return $this->get($name);
+		$move = $this->get($name);
+		
+		if(null === $move)
+			throw new \LogicException("Move {$name} not found");
+
+		return $move;
 	}
 
 	public function getAllMoves() : array
