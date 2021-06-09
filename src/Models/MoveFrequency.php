@@ -15,4 +15,9 @@ class MoveFrequency extends Model
 		$this->type      = $type;
 		$this->frequency = $frequency;
 	}
+
+	public function __toString()
+	{
+		return $this->type . ($this->frequency !== 0 ? " {$this->frequency}" : "");
+	}
 }

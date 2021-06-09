@@ -20,7 +20,7 @@ class MoveRange extends Model
 		$this->number_of_targets = $number_of_targets;
 	}
 
-	public function toString() : string
+	public function __toString(): string
 	{
 		$human_readable = \PtuDex\Enums\MoveRangeTypes::getHumanReadableText($this->range_type);
 

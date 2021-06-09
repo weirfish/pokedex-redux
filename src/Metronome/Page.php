@@ -30,7 +30,7 @@ class Page extends \Engine\Page\Page
 		$this->addElement
 		(
 			\PtuDex\Metronome\Elements\MetronomeResults::create()
-			->setMoves()
+			->setMoves(...\PtuDex\Factories\MoveFactory::getInstance()->getAllMoves())
 		);
 	}
 }

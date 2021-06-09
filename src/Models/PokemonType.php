@@ -124,4 +124,9 @@ class PokemonType extends Model
 
 		return $rows;
 	}
+
+	public function __toString()
+	{
+		return $this->name;
+	}
 }
