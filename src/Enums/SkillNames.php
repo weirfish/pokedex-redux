@@ -4,8 +4,6 @@ namespace PtuDex\Enums;
 
 class SkillNames extends \Engine\Abstracts\Enum
 {
-	const PREFIX               = "skill.";
-
 	const ACROBATICS           = "skill.acrobatics";
 	const ATHLETICS            = "skill.athletics";
 	const CHARM                = "skill.charm";
@@ -83,10 +81,5 @@ class SkillNames extends \Engine\Abstracts\Enum
 			throw new \Exception("Given value {$val} is not a skill.");
 
 		return in_array($val, $category_skills);
-	}
-
-	public static function isConstantValue($value, bool $has_prefix = true) : bool
-	{
-		return parent::isConstantValue(strtolower($value), $has_prefix);
 	}
 }

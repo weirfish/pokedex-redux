@@ -10,7 +10,7 @@ class Skill extends Model
 
 	public function __construct($name, $rank = 0, $modifier = 0)
 	{
-		if(!\Enums\SkillNames::isConstantValue($name))
+		if(!\PtuDex\Enums\SkillNames::isConstantValue($name))
 			throw new \LogicException("Name {$name} is not a valid skill name");
 
 		$this->name     = $name;

@@ -4,6 +4,10 @@
 		"description": ""
 	},
 	{
+		"name": "Absorb Force",
+		"description": ""
+	},
+	{
 		"name": "Adaptability",
 		"description": ""
 	},
@@ -37,6 +41,10 @@
 	},
 	{
 		"name": "Aqua Boost",
+		"description": ""
+	},
+	{
+		"name": "Aqua Bullet",
 		"description": ""
 	},
 	{
@@ -164,6 +172,10 @@
 		"description": ""
 	},
 	{
+		"name": "Combo Striker",
+		"description": ""
+	},
+	{
 		"name": "Competitive",
 		"description": ""
 	},
@@ -276,6 +288,10 @@
 		"description": ""
 	},
 	{
+		"name": "Designer",
+		"description": ""
+	},
+	{
 		"name": "Diamond Defense",
 		"description": ""
 	},
@@ -320,11 +336,19 @@
 		"description": ""
 	},
 	{
+		"name": "Dream Smoke",
+		"description": ""
+	},
+	{
 		"name": "Dust Cloud",
 		"description": ""
 	},
 	{
 		"name": "Early Bird",
+		"description": ""
+	},
+	{
+		"name": "Eggscellence",
 		"description": ""
 	},
 	{
@@ -337,6 +361,10 @@
 	},
 	{
 		"name": "Electrodash",
+		"description": ""
+	},
+	{
+		"name": "Empower",
 		"description": ""
 	},
 	{
@@ -452,6 +480,10 @@
 		"description": ""
 	},
 	{
+		"name": "Full Guard",
+		"description": ""
+	},
+	{
 		"name": "Fur Coat",
 		"description": ""
 	},
@@ -465,6 +497,10 @@
 	},
 	{
 		"name": "Gentle Vibe",
+		"description": ""
+	},
+	{
+		"name": "Giver",
 		"description": ""
 	},
 	{
@@ -484,11 +520,11 @@
 		"description": ""
 	},
 	{
-		"name": "Gulp",
+		"name": "Guts",
 		"description": ""
 	},
 	{
-		"name": "Guts",
+		"name": "Handyman",
 		"description": ""
 	},
 	{
@@ -521,6 +557,10 @@
 	},
 	{
 		"name": "Helper",
+		"description": ""
+	},
+	{
+		"name": "Heliovolt",
 		"description": ""
 	},
 	{
@@ -616,6 +656,10 @@
 		"description": ""
 	},
 	{
+		"name": "Juicy Energy",
+		"description": ""
+	},
+	{
 		"name": "Kampfgeist",
 		"description": ""
 	},
@@ -632,6 +676,10 @@
 		"description": ""
 	},
 	{
+		"name": "Lancer",
+		"description": ""
+	},
+	{
 		"name": "Last Chance",
 		"description": ""
 	},
@@ -644,6 +692,14 @@
 		"description": ""
 	},
 	{
+		"name": "Leaf Rush",
+		"description": ""
+	},
+	{
+		"name": "Leafy Cloak",
+		"description": ""
+	},
+	{
 		"name": "Leek Mastery",
 		"description": ""
 	},
@@ -653,6 +709,10 @@
 	},
 	{
 		"name": "Life Force",
+		"description": ""
+	},
+	{
+		"name": "Line Charge",
 		"description": ""
 	},
 	{
@@ -685,6 +745,10 @@
 	},
 	{
 		"name": "Mach Speed",
+		"description": ""
+	},
+	{
+		"name": "Maelstrom Pulse",
 		"description": ""
 	},
 	{
@@ -788,6 +852,14 @@
 		"description": ""
 	},
 	{
+		"name": "Needles",
+		"description": ""
+	},
+	{
+		"name": "Nimble Strikes",
+		"description": ""
+	},
+	{
 		"name": "No Guard",
 		"description": ""
 	},
@@ -817,6 +889,10 @@
 	},
 	{
 		"name": "Overgrow",
+		"description": ""
+	},
+	{
+		"name": "Overgrowth",
 		"description": ""
 	},
 	{
@@ -940,6 +1016,10 @@
 		"description": ""
 	},
 	{
+		"name": "Ragelope",
+		"description": ""
+	},
+	{
 		"name": "Rattled",
 		"description": ""
 	},
@@ -996,6 +1076,10 @@
 		"description": ""
 	},
 	{
+		"name": "Sacred Bell",
+		"description": ""
+	},
+	{
 		"name": "Sand Force",
 		"description": ""
 	},
@@ -1020,6 +1104,10 @@
 		"description": ""
 	},
 	{
+		"name": "Seasonal",
+		"description": ""
+	},
+	{
 		"name": "Sequence",
 		"description": ""
 	},
@@ -1028,7 +1116,7 @@
 		"description": ""
 	},
 	{
-		"name": "Serpent’s Mark",
+		"name": "Serpent's Mark",
 		"description": ""
 	},
 	{
@@ -1084,6 +1172,10 @@
 		"description": ""
 	},
 	{
+		"name": "Snuggle",
+		"description": ""
+	},
+	{
 		"name": "Snow Cloak",
 		"description": ""
 	},
@@ -1096,6 +1188,10 @@
 		"description": ""
 	},
 	{
+		"name": "Sol Veil",
+		"description": ""
+	},
+	{
 		"name": "Solid Rock",
 		"description": ""
 	},
@@ -1105,6 +1201,10 @@
 	},
 	{
 		"name": "Soothing Tone",
+		"description": ""
+	},
+	{
+		"name": "Sorcery",
 		"description": ""
 	},
 	{
@@ -1125,6 +1225,10 @@
 	},
 	{
 		"name": "Spinning Dance",
+		"description": ""
+	},
+	{
+		"name": "Spike Shot",
 		"description": ""
 	},
 	{
@@ -1276,6 +1380,10 @@
 		"description": ""
 	},
 	{
+		"name": "Tingle",
+		"description": ""
+	},
+	{
 		"name": "Tingly Tongue",
 		"description": ""
 	},
@@ -1285,6 +1393,10 @@
 	},
 	{
 		"name": "Tochukaso",
+		"description": ""
+	},
+	{
+		"name": "Tonguelash",
 		"description": ""
 	},
 	{
@@ -1308,6 +1420,10 @@
 		"description": ""
 	},
 	{
+		"name": "Trinity",
+		"description": ""
+	},
+	{
 		"name": "Transporter",
 		"description": ""
 	},
@@ -1321,6 +1437,78 @@
 	},
 	{
 		"name": "Twisted Power",
+		"description": ""
+	},
+	{
+		"name": "Type Aura (Normal)",
+		"description": ""
+	},
+	{
+		"name": "Type Aura (Fire)",
+		"description": ""
+	},
+	{
+		"name": "Type Aura (Fighting)",
+		"description": ""
+	},
+	{
+		"name": "Type Aura (Water)",
+		"description": ""
+	},
+	{
+		"name": "Type Aura (Flying)",
+		"description": ""
+	},
+	{
+		"name": "Type Aura (Grass)",
+		"description": ""
+	},
+	{
+		"name": "Type Aura (Poison)",
+		"description": ""
+	},
+	{
+		"name": "Type Aura (Electric)",
+		"description": ""
+	},
+	{
+		"name": "Type Aura (Ground)",
+		"description": ""
+	},
+	{
+		"name": "Type Aura (Psychic)",
+		"description": ""
+	},
+	{
+		"name": "Type Aura (Rock)",
+		"description": ""
+	},
+	{
+		"name": "Type Aura (Ice)",
+		"description": ""
+	},
+	{
+		"name": "Type Aura (Bug)",
+		"description": ""
+	},
+	{
+		"name": "Type Aura (Dragon)",
+		"description": ""
+	},
+	{
+		"name": "Type Aura (Ghost)",
+		"description": ""
+	},
+	{
+		"name": "Type Aura (Dark)",
+		"description": ""
+	},
+	{
+		"name": "Type Aura (Steel)",
+		"description": ""
+	},
+	{
+		"name": "Type Aura (Fairy)",
 		"description": ""
 	},
 	{
@@ -1412,6 +1600,10 @@
 		"description": ""
 	},
 	{
+		"name": "Weird Power",
+		"description": ""
+	},
+	{
 		"name": "Whirlwind Kicks",
 		"description": ""
 	},
@@ -1428,7 +1620,7 @@
 		"description": ""
 	},
 	{
-		"name": "Winter’s Kiss",
+		"name": "Winter's Kiss",
 		"description": ""
 	},
 	{
@@ -1453,46 +1645,6 @@
 	},
 	{
 		"name": "Ability: Zen Mode",
-		"description": ""
-	},
-	{
-		"name": "Static",
-		"description": ""
-	},
-	{
-		"name": "Effect: Keep two sets of Base Stats for Darmanitan, the",
-		"description": ""
-	},
-	{
-		"name": "first set of Base Stats are its normal stats while the second",
-		"description": ""
-	},
-	{
-		"name": "will be referred to during Zen Mode. The HP Stat for",
-		"description": ""
-	},
-	{
-		"name": "both sets of Base Stats must be the same. If Darmanitan",
-		"description": ""
-	},
-	{
-		"name": "has its Base Stats altered in any way, both sets of Base",
-		"description": ""
-	},
-	{
-		"name": "Stats are affected. As a Free Action, Darmanitan may",
-		"description": ""
-	},
-	{
-		"name": "activate Zen Mode if it is at less than 50% of its full Hit",
-		"description": ""
-	},
-	{
-		"name": "Points. Darmanitan may change back from Zen Mode",
-		"description": ""
-	},
-	{
-		"name": "as a Free Action if its Hit Point total is at 50% or higher.",
 		"description": ""
 	}
 ]
