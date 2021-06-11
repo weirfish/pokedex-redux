@@ -7,7 +7,7 @@ class Project extends \Engine\Project
 	use \Engine\Traits\Singleton;
 
 	/**
-	 * @return Engine\Routing\RouteFactory[]
+	 * @return \Engine\Routing\RouteFactory[]
 	 */
 	public function getRouteFactories() : array
 	{

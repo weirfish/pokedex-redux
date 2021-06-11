@@ -49,7 +49,7 @@ class EvolutionChain extends EntityList
 
 	public function getPokemonByName(string $name) : Pokemon
 	{
-		return $this->getPokemonListEntryByName($name)->pokemon;
+		return $this->getPokemonListEntryByName($name)->entity;
 	}
 
 	public function getPokemonListEntryByPokemon(Pokemon $pokemon) : EvolutionChainEntry

@@ -21,7 +21,7 @@ class MoveList extends EntityList
 
 	public function getMoveByName(string $name) : Move
 	{
-		return $this->getMoveListEntryByName($name)->move;
+		return $this->getMoveListEntryByName($name)->entity;
 	}
 
 	public function getMoveListEntryByMove(Move $move) : MoveListEntry

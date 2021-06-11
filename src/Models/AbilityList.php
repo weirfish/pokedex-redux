@@ -38,9 +38,9 @@ class AbilityList extends EntityList
 		return $this->getEntityListEntryByProperty($name, "name");
 	}
 
-	public function getAbilityByName(string $name) : AbilityListEntry
+	public function getAbilityByName(string $name) : Ability
 	{
-		return $this->getAbilityListEntryByName($name)->ability;
+		return $this->getAbilityListEntryByName($name)->entity;
 	}
 
 	public function getAbilityListEntryByAbility(Ability $ability) : AbilityListEntry
