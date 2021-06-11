@@ -17,10 +17,11 @@
     ],
     "require": {
         "weirweb/engine": "@dev",
+        "weirweb/engine-database": "@dev",
         "weirweb/engine-dice": "@dev",
-        "weirweb/engine-routing": "@dev",
+        "weirweb/engine-model": "@dev",
         "weirweb/engine-page": "@dev",
-        "weirweb/engine-model": "@dev"
+        "weirweb/engine-routing": "@dev"
     },
     "require-dev": {
         "phpstan/phpstan": "^0.12.81",
@@ -34,6 +35,10 @@
         {
             "type": "path",
             "url": "../engine-routing"
+        },
+        {
+            "type": "path",
+            "url": "../engine-database"
         },
         {
             "type": "path",

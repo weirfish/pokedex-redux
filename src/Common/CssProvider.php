@@ -8,16 +8,21 @@ class CssProvider
 
 	public function getMetronomeButtonCss()
 	{
-		return \Engine\AssetLinkProvider::getInstance()->getCssPath("metronome-button");
+		return \Engine\AssetLinkProvider::getInstance()->getCssPath("metronome/metronome-button");
 	}
 
 	public function getMetronomeResultsCss()
 	{
-		return \Engine\AssetLinkProvider::getInstance()->getCssPath("metronome-results");
+		return \Engine\AssetLinkProvider::getInstance()->getCssPath("metronome/metronome-results");
 	}
 
 	public function getPokemonTypeDecoratorCss()
 	{
-		return \Engine\AssetLinkProvider::getInstance()->getCssPath("pokemon-type-decorator");
+		return \Engine\AssetLinkProvider::getInstance()->getCssPath("common/pokemon-type-decorator");
+	}
+
+	public function getHomeCss()
+	{
+		return \Engine\AssetLinkProvider::getInstance()->getCssPath("home/home");
 	}
 }

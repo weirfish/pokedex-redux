@@ -1,0 +1,46 @@
+#main-menu
+{
+	width: 100%;
+
+	&>a
+	{
+		color: inherit;
+		text-decoration: inherit;
+		width: 100%;
+		border-bottom: 3px solid #888;
+
+		&:last-child
+		{
+			border-bottom: 0;
+		}
+
+		&>div
+		{
+			width: 100%;
+			padding: 20px;
+			justify-content: center;
+
+			&:hover
+			{
+				background-color: #DDD;
+			}
+
+			img
+			{
+				flex: 1 1 0;
+				max-height: 200px;
+				max-width: 200px;
+			}
+
+			&>div
+			{
+				flex: 3 1 0;
+
+				&>*
+				{
+					width: 100%;
+				}
+			}
+		}
+	}
+}

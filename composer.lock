@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0f05c87377ffe8b310d9bb2f0a211b26",
+    "content-hash": "eb96ce2f73c7daf563833cc8f58d4513",
     "packages": [
         {
             "name": "weirweb/engine",
@@ -31,6 +31,39 @@
                 }
             ],
             "description": "Weirweb Engine",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "weirweb/engine-database",
+            "version": "0.1",
+            "dist": {
+                "type": "path",
+                "url": "../engine-database",
+                "reference": "2c10ec77f2765135732a425634bec0ddddf9ed5e"
+            },
+            "require": {
+                "weirweb/engine": "@dev"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.12.81",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "Engine\\Database\\": "src",
+                    "Engine\\Database\\Test\\": "test"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Thomas Pearce",
+                    "email": "github@tpearce.net"
+                }
+            ],
+            "description": "Weirweb Engine - Database modeul",
             "transport-options": {
                 "relative": true
             }
@@ -2317,10 +2350,11 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "weirweb/engine": 20,
+        "weirweb/engine-database": 20,
         "weirweb/engine-dice": 20,
-        "weirweb/engine-routing": 20,
+        "weirweb/engine-model": 20,
         "weirweb/engine-page": 20,
-        "weirweb/engine-model": 20
+        "weirweb/engine-routing": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

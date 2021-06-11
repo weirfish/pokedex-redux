@@ -4,6 +4,11 @@ namespace PtuDex\Home\Elements;
 
 class MainMenu extends \Engine\Page\Element\Div
 {
+	public function __construct()
+	{
+		$this->addAttribute(new \Engine\Page\Element\Attribute("id", "main-menu"));
+	}
+
 	public function render(): string
 	{
 		$this->setElements

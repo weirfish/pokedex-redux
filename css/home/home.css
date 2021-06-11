@@ -1,0 +1,45 @@
+#main-menu {
+  width: 100%;
+}
+
+#main-menu > a {
+  color: inherit;
+  text-decoration: inherit;
+  width: 100%;
+  border-bottom: 3px solid #888;
+}
+
+#main-menu > a:last-child {
+  border-bottom: 0;
+}
+
+#main-menu > a > div {
+  width: 100%;
+  padding: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#main-menu > a > div:hover {
+  background-color: #DDD;
+}
+
+#main-menu > a > div img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+  max-height: 200px;
+  max-width: 200px;
+}
+
+#main-menu > a > div > div {
+  -webkit-box-flex: 3;
+      -ms-flex: 3 1 0px;
+          flex: 3 1 0;
+}
+
+#main-menu > a > div > div > * {
+  width: 100%;
+}
+/*# sourceMappingURL=home.css.map */
