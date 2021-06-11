@@ -18,10 +18,10 @@ class PokemonFactory extends JsonDrivenFactory
 		$model->abilities    = $this->makeAbilityList($data['abilities']);
 		$model->attributes   = $this->makeAttributeSet($data['attributes']);
 		$model->capabilities = $this->makeCapabilityList($data['capabilities']);
-		$model->egg_moves    = $this->makeMoveList($data['moves']['egg'] ?? []);
-		$model->learn_moves  = $this->makeMoveList($data['moves']['learn'] ?? []);
-		$model->tutor_moves  = $this->makeMoveList($data['moves']['hmtm'] ?? []);
-		$model->hmtm_moves   = $this->makeMoveList($data['moves']['tutor'] ?? []);
+		$model->eggMoves    = $this->makeMoveList($data['moves']['egg'] ?? []);
+		$model->learnMoves  = $this->makeMoveList($data['moves']['learn'] ?? []);
+		$model->tutorMoves  = $this->makeMoveList($data['moves']['hmtm'] ?? []);
+		$model->hmtmMoves   = $this->makeMoveList($data['moves']['tutor'] ?? []);
 		$model->skills       = $this->makeSkillSet($data['skills']);
 		$model->types        = $this->makeTypeSet($data['types']);
 
@@ -32,10 +32,10 @@ class PokemonFactory extends JsonDrivenFactory
 	{
 		$types = [];
 
-		foreach($data as $type_name)
+		foreach($data as $typeName)
 		{
 			$types[] = TypeFactory::getInstance()
-			->get($type_name);
+			->get($typeName);
 		}
 
 		return new \PtuDex\Models\PokemonTypeSet(...$types);

@@ -4,49 +4,49 @@ namespace PtuDex\Models;
 
 class AttributeSet extends Model
 {
-	public $hp              = 0;
-	public $attack          = 0;
-	public $defense         = 0;
-	public $special_attack  = 0;
-	public $special_defense = 0;
-	public $speed           = 0;
+	private $hp             = 0;
+	private $attack         = 0;
+	private $defense        = 0;
+	private $specialAttack  = 0;
+	private $specialDefense = 0;
+	private $speed          = 0;
 
-	private $hp_cs              = 0;
-	private $attack_cs          = 0;
-	private $defense_cs         = 0;
-	private $special_attack_cs  = 0;
-	private $special_defense_cs = 0;
-	private $speed_cs           = 0;
+	private $hpStages              = 0;
+	private $attackStages          = 0;
+	private $defenseStages         = 0;
+	private $specialAttackStages  = 0;
+	private $specialDefenseStages = 0;
+	private $speedStages           = 0;
 
-	public function __construct($hp, $attack, $defense, $special_attack, $special_defense, $speed)
+	public function __construct($hp, $attack, $defense, $specialAttack, $specialDefense, $speed)
 	{
-		$this->hp              = $hp;
-		$this->attack          = $attack;
-		$this->defense         = $defense;
-		$this->special_attack  = $special_attack;
-		$this->special_defense = $special_defense;
-		$this->speed           = $speed;
+		$this->hp             = $hp;
+		$this->attack         = $attack;
+		$this->defense        = $defense;
+		$this->specialAttack  = $specialAttack;
+		$this->specialDefense = $specialDefense;
+		$this->speed          = $speed;
 	}
 
 	public function calculateAttribute($stat) : float
 	{
-		if(!\Enums\AttributeNames::isConstantValue($stat))
+		if(!\PtuDex\Enums\AttributeNames::isConstantValue($stat))
 			throw new \LogicException("{$stat} is not a valid attribute name");
 
 		switch($stat)
 		{
-			case \Enums\AttributeNames::HP:
-				return $this->calcAttribute($this->hp, $this->hp_cs);
-			case \Enums\AttributeNames::ATTACK:
-				return $this->calcAttribute($this->attack, $this->attack_cs);
-			case \Enums\AttributeNames::DEFENSE:
-				return $this->calcAttribute($this->defense, $this->defense_cs);
-			case \Enums\AttributeNames::SPECIAL_ATTACK:
-				return $this->calcAttribute($this->special_attack, $this->special_attack_cs);
-			case \Enums\AttributeNames::SPECIAL_DEFENSE:
-				return $this->calcAttribute($this->special_defense, $this->special_defense_cs);
-			case \Enums\AttributeNames::SPEED:
-				return $this->calcAttribute($this->speed, $this->speed_cs);
+			case \PtuDex\Enums\AttributeNames::HP:
+				return $this->calcAttribute($this->hp, $this->hpStages);
+			case \PtuDex\Enums\AttributeNames::ATTACK:
+				return $this->calcAttribute($this->attack, $this->attackStages);
+			case \PtuDex\Enums\AttributeNames::DEFENSE:
+				return $this->calcAttribute($this->defense, $this->defenseStages);
+			case \PtuDex\Enums\AttributeNames::SPECIAL_ATTACK:
+				return $this->calcAttribute($this->specialAttack, $this->specialAttackStages);
+			case \PtuDex\Enums\AttributeNames::SPECIAL_DEFENSE:
+				return $this->calcAttribute($this->specialDefense, $this->specialDefenseStages);
+			case \PtuDex\Enums\AttributeNames::SPEED:
+				return $this->calcAttribute($this->speed, $this->speedStages);
 		}
 	}
 
@@ -55,9 +55,9 @@ class AttributeSet extends Model
 		return $score * (1 + $this->getCombatStageModifier($cs) * $cs);
 	}
 
-	private function getCombatStageModifier($combat_stages) : float
+	private function getCombatStageModifier($combatStages) : float
 	{
-		if($combat_stages > 0)
+		if($combatStages > 0)
 			return 0.2;
 		else return 0.1;
 	}

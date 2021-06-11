@@ -4,7 +4,7 @@ namespace PtuDex\Metronome\Elements;
 
 class MetronomeButton extends \Engine\Page\Element\Button
 {
-	private int $number_of_rolls;
+	private int $numberOfRolls;
 
 	public function render(): string
 	{
@@ -15,7 +15,7 @@ class MetronomeButton extends \Engine\Page\Element\Button
 
 	private function getAmountString()
 	{
-		switch($this->number_of_rolls)
+		switch($this->numberOfRolls)
 		{
 			case 1: return "once";
 			case 2: return "twice";
@@ -23,12 +23,12 @@ class MetronomeButton extends \Engine\Page\Element\Button
 		}
 	}
 
-	public function setNumberOfRolls(int $number_of_rolls) : self
+	public function setNumberOfRolls(int $numberOfRolls) : self
 	{
-		if($number_of_rolls < 1 || $number_of_rolls > 3)
+		if($numberOfRolls < 1 || $numberOfRolls > 3)
 			throw new \LogicException("Metronome can only be run 1, 2, or 3 times");
 
-		$this->number_of_rolls = $number_of_rolls;
+		$this->numberOfRolls = $numberOfRolls;
 	
 		return $this;
 	}

@@ -6,22 +6,22 @@ class MainMenuItem extends \Engine\Page\Element\Div
 {
 	private string $title;
 	private string $description;
-	private string $icon_path;
-	private string $link_path = "";
+	private string $iconPath;
+	private string $linkPath = "";
 	
 	public function render(): string
 	{
 		$this->setElements
 		([
 			\Engine\Page\Element\Anchor::create()
-			->setSource($this->link_path)
+			->setSource($this->linkPath)
 			->addElement
 			(
 				\Engine\Page\Element\Div::create()
 				->setElements
 				([
 					\Engine\Page\Element\Image::create()
-					->setSrc($this->icon_path),
+					->setSrc($this->iconPath),
 					\Engine\Page\Element\Div::create()
 					->setElements([
 						\Engine\Page\Element\Heading::create()
@@ -37,9 +37,9 @@ class MainMenuItem extends \Engine\Page\Element\Div
 		return parent::render();
 	}
 	
-	public function setIconPath(string $icon_path) : self
+	public function setIconPath(string $iconPath) : self
 	{
-		$this->icon_path = $icon_path;
+		$this->iconPath = $iconPath;
 	
 		return $this;
 	}
@@ -55,9 +55,9 @@ class MainMenuItem extends \Engine\Page\Element\Div
 	
 		return $this;
 	}
-	public function setLinkPath(string $link_path) : self
+	public function setLinkPath(string $linkPath) : self
 	{
-		$this->link_path = $link_path;
+		$this->linkPath = $linkPath;
 	
 		return $this;
 	}

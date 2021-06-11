@@ -8,7 +8,14 @@ class MetronomeResults extends \Engine\Page\Element\ModelTable
 {
 	public function setMoves(Move ...$moves) : self
 	{
-		return $this->setModels($moves);
+		$models = [];
+		
+		foreach($moves as $move)
+		{
+			$models[] = \PtuDex\Metronome\Model\MetronomeResult::fromMove($move);
+		}
+
+		return $this->setModels($models);
 	}
 
 	public function render(): string

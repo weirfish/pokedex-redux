@@ -75,11 +75,11 @@ class SkillNames extends \Engine\Abstracts\Enum
 		return static::isSkillFromCategory($val, static::getSocialSkills());
 	}
 
-	protected static function isSkillFromCategory($val, $category_skills) : bool
+	protected static function isSkillFromCategory($val, $categorySkills) : bool
 	{
 		if(!static::isConstantValue($val))
 			throw new \Exception("Given value {$val} is not a skill.");
 
-		return in_array($val, $category_skills);
+		return in_array($val, $categorySkills);
 	}
 }

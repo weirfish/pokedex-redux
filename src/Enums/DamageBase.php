@@ -34,12 +34,12 @@ class DamageBase extends \Engine\Abstracts\Enum
 	const DB27 = "8d12+70";
 	const DB28 = "8d12+80";
 
-	public static function getDamageBase(int $db_number) : string
+	public static function getDamageBase(int $dbNumber) : string
 	{
-		if($db_number < 0 || $db_number > 29)
-			throw new \LogicException("DB{$db_number} is not supported");
+		if($dbNumber < 0 || $dbNumber > 29)
+			throw new \LogicException("DB{$dbNumber} is not supported");
 
-		$const = "DB" . $db_number;
+		$const = "DB" . $dbNumber;
 
 		return constant(self::class . "::$const");
 	}
@@ -63,10 +63,10 @@ class DamageBase extends \Engine\Abstracts\Enum
 
 	public static function stabifyDB(string $damageBase) : string
 	{
-		$db_number = \intval(self::getDbNumber($damageBase)) + 2;
+		$dbNumber = \intval(self::getDbNumber($damageBase)) + 2;
 
-		$const_name = "DB" . $db_number;
+		$constName = "DB" . $dbNumber;
 
-		return constant("self::" . $const_name);
+		return constant("self::" . $constName);
 	}
 }

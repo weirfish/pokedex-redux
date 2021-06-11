@@ -14,29 +14,29 @@ class EvolutionChain extends EntityList
 		return $this->hasEntity($pokemon);
 	}
 
-	public function getPreviousEvo(Pokemon $root_pokemon) : ?Pokemon
+	public function getPreviousEvo(Pokemon $rootPokemon) : ?Pokemon
 	{
-		if(!$this->hasPokemon($root_pokemon))
-			throw new \Exception("{$root_pokemon->name} is not present in this pokemon list");
+		if(!$this->hasPokemon($rootPokemon))
+			throw new \Exception("{$rootPokemon->name} is not present in this pokemon list");
 
-		foreach($this->entity_list_entries as $key => $pokemon)
+		foreach($this->entityListEntries as $key => $pokemon)
 		{
-			if($pokemon->entity->name === $root_pokemon->name && $key >= 1)
-				return $this->entity_list_entries[$key - 1];
+			if($pokemon->entity->name === $rootPokemon->name && $key >= 1)
+				return $this->entityListEntries[$key - 1];
 		}
 
 		return null;
 	}
 
-	public function getNextEvo(Pokemon $root_pokemon) : ?Pokemon
+	public function getNextEvo(Pokemon $rootPokemon) : ?Pokemon
 	{
-		if(!$this->hasPokemon($root_pokemon))
-			throw new \Exception("{$root_pokemon->name} is not present in this pokemon list");
+		if(!$this->hasPokemon($rootPokemon))
+			throw new \Exception("{$rootPokemon->name} is not present in this pokemon list");
 
-		foreach($this->entity_list_entries as $key => $pokemon)
+		foreach($this->entityListEntries as $key => $pokemon)
 		{
-			if($pokemon->entity->name === $root_pokemon->name && $key < count($this->entity_list_entries) - 1)
-				return $this->entity_list_entries[$key + 1];
+			if($pokemon->entity->name === $rootPokemon->name && $key < count($this->entityListEntries) - 1)
+				return $this->entityListEntries[$key + 1];
 		}
 
 		return null;

@@ -4,13 +4,13 @@ namespace PtuDex\Common\Elements;
 
 class PokemonTypeSet extends \Engine\Page\Element\Div
 {
-	private \PtuDex\Models\PokemonTypeSet $pokemon_type_set;
+	private \PtuDex\Models\PokemonTypeSet $pokemonTypeSet;
 	
 	public function render() : string
 	{
 		$elements = [];
 
-		foreach($this->pokemon_type_set->types as $type)
+		foreach($this->pokemonTypeSet->types as $type)
 		{
 			$elements[] = \Engine\Page\Element\Div::create()
 			->addElement
@@ -26,9 +26,9 @@ class PokemonTypeSet extends \Engine\Page\Element\Div
 		return parent::render();
 	}
 
-	public function setPokemonTypeSet(\PtuDex\Models\PokemonTypeSet $pokemon_type_set) : self
+	public function setPokemonTypeSet(\PtuDex\Models\PokemonTypeSet $pokemonTypeSet) : self
 	{
-		$this->pokemon_type_set = $pokemon_type_set;
+		$this->pokemonTypeSet = $pokemonTypeSet;
 	
 		return $this;
 	}

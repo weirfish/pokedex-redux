@@ -23,8 +23,8 @@ class MoveFactory extends JsonDrivenFactory
 
 	protected function makeModel(array $data): \PtuDex\Models\Model
 	{
-		$freq_data    = explode(" ", $data['frequency']);
-		$freq         = new \PtuDex\Models\MoveFrequency(strtolower($freq_data[0]), intval($freq_data[1] ?? 0));
+		$freqData    = explode(" ", $data['frequency']);
+		$freq         = new \PtuDex\Models\MoveFrequency(strtolower($freqData[0]), intval($freqData[1] ?? 0));
 
 		return new \PtuDex\Models\Move
 		(
@@ -42,99 +42,99 @@ class MoveFactory extends JsonDrivenFactory
 
 	protected function getMoveRange($row)
 	{
-		$range_string = $row['range'];
-		$type = \PtuDex\Enums\MoveRangeTypes::parseRangeStringForType($range_string);
-		\preg_match(\PtuDex\Enums\MoveRangeTypes::getRegexForType($type), $range_string, $range);
+		$rangeString = $row['range'];
+		$type = \PtuDex\Enums\MoveRangeTypes::parseRangeStringForType($rangeString);
+		\preg_match(\PtuDex\Enums\MoveRangeTypes::getRegexForType($type), $rangeString, $range);
 
-		$min_range = 0;
-		$max_range = 6;
+		$minRange = 0;
+		$maxRange = 6;
 		$targets   = 1;
 
 		switch($type)
 		{
 			case \PtuDex\Enums\MoveRangeTypes::ADJACENT:
-				$min_range = 0;
-				$max_range = 1;
+				$minRange = 0;
+				$maxRange = 1;
 				$targets   = 100;
 			break;
 			case \PtuDex\Enums\MoveRangeTypes::MELEE:
-				$min_range = 0;
-				$max_range = 1;
+				$minRange = 0;
+				$maxRange = 1;
 				$targets   = $range[1];
 			break;
 			case \PtuDex\Enums\MoveRangeTypes::RANGED:
-				$min_range = 0;
-				$max_range = $range[1];
+				$minRange = 0;
+				$maxRange = $range[1];
 				$targets   = $range[2];
 			break;
 			case \PtuDex\Enums\MoveRangeTypes::RANGED_BLAST:
-				$min_range = $range[1];
-				$max_range = $range[2];
+				$minRange = $range[1];
+				$maxRange = $range[2];
 				$targets   = 100;
 			break;
 			case \PtuDex\Enums\MoveRangeTypes::BURST:
-				$min_range = 0;
-				$max_range = $range[1];
+				$minRange = 0;
+				$maxRange = $range[1];
 				$targets   = 100;
 			break;
 			case \PtuDex\Enums\MoveRangeTypes::CARDINALLY_ADJACENT:
-				$min_range = 0;
-				$max_range = 1;
+				$minRange = 0;
+				$maxRange = 1;
 				$targets   = 100;
 			break;
 			case \PtuDex\Enums\MoveRangeTypes::ADJACENT:
-				$min_range = 0;
-				$max_range = 1;
+				$minRange = 0;
+				$maxRange = 1;
 				$targets   = 100;
 			break;
 			case \PtuDex\Enums\MoveRangeTypes::CLOSE_BLAST:
-				$min_range = 0;
-				$max_range = $range[1];
+				$minRange = 0;
+				$maxRange = $range[1];
 				$targets   = 100;
 			break;
 			case \PtuDex\Enums\MoveRangeTypes::CONE:
-				$min_range = 0;
-				$max_range = $range[1];
+				$minRange = 0;
+				$maxRange = $range[1];
 				$targets   = 100;
 			break;
 			case \PtuDex\Enums\MoveRangeTypes::LINE:
-				$min_range = 0;
-				$max_range = $range[1];
+				$minRange = 0;
+				$maxRange = $range[1];
 				$targets   = 100;
 			break;
 			case \PtuDex\Enums\MoveRangeTypes::HAZARD:
-				$min_range = 0;
-				$max_range = $range[1] ?? 6;
+				$minRange = 0;
+				$maxRange = $range[1] ?? 6;
 				$targets   = 100;
 			break;
 			case \PtuDex\Enums\MoveRangeTypes::FIELD:
-				$min_range = 0;
-				$max_range = 100;
+				$minRange = 0;
+				$maxRange = 100;
 				$targets   = 100;
 			break;
 			case \PtuDex\Enums\MoveRangeTypes::BLESSING:
-				$min_range = 0;
-				$max_range = 100;
+				$minRange = 0;
+				$maxRange = 100;
 				$targets   = 100;
 			break;
 			case \PtuDex\Enums\MoveRangeTypes::NONE:
-				$min_range = 0;
-				$max_range = 0;
+				$minRange = 0;
+				$maxRange = 0;
 				$targets   = 1;
 			break;
 			case \PtuDex\Enums\MoveRangeTypes::MRT_SELF:
-				$min_range = 0;
-				$max_range = 0;
+				$minRange = 0;
+				$maxRange = 0;
 				$targets   = 1;
 			break;
 			case \PtuDex\Enums\MoveRangeTypes::SPECIAL:
-				$min_range = 0;
-				$max_range = 100;
+				$minRange = 0;
+				$maxRange = 100;
 				$targets   = 100;
 			break;
 		}
 
-		return new \PtuDex\Models\MoveRange($type, intval($min_range), intval($max_range), intval($targets));
+		return new \PtuDex\Models\MoveRange($type, intval($minRange), intval($maxRange), intval($targets));
 	}
 
 	public function getMove(string $name) : \PtuDex\Models\Move

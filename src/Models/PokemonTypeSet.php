@@ -11,32 +11,32 @@ class PokemonTypeSet extends Model
 		$this->types = $types;
 	}
 
-	public function hasType($type_to_find) : bool
+	public function hasType($typeToFind) : bool
 	{
-		if(!\Enums\TypeName::isConstantValue($type_to_find))
-			throw new \LogicException("{$type_to_find} isn't a type name");
+		if(!\Enums\TypeName::isConstantValue($typeToFind))
+			throw new \LogicException("{$typeToFind} isn't a type name");
 
 		foreach($this->types as $type)
 		{
-			if($type->name === $type_to_find)
+			if($type->name === $typeToFind)
 				return true;
 		}
 
 		return false;
 	}
 
-	public function calculateTypeModifier(PokemonType $attacking_type) : int
+	public function calculateTypeModifier(PokemonType $attackingType) : int
 	{
 		$immunity = false;
 		$multiplier = 1;
 
-		foreach($this->types as $defensive_type)
+		foreach($this->types as $defensiveType)
 		{
-			if($defensive_type->isImmuneTo($attacking_type))
+			if($defensiveType->isImmuneTo($attackingType))
 				$immunity = true;
-			elseif($defensive_type->isWeakTo($attacking_type))
+			elseif($defensiveType->isWeakTo($attackingType))
 				$multiplier++;
-			elseif($defensive_type->isResistantTo($attacking_type))
+			elseif($defensiveType->isResistantTo($attackingType))
 				$multiplier--;
 		}
 

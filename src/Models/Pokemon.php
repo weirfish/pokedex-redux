@@ -9,10 +9,10 @@ class Pokemon extends Entity
 	public ?AttributeSet $attributes = null;
 	public ?SkillSet $skills         = null;
 
-	public ?MoveList $learn_moves = null;
-	public ?MoveList $tutor_moves = null;
-	public ?MoveList $hmtm_moves  = null;
-	public ?MoveList $egg_moves   = null;
+	public ?MoveList $learnMoves = null;
+	public ?MoveList $tutorMoves = null;
+	public ?MoveList $hmtmMoves  = null;
+	public ?MoveList $eggMoves   = null;
 
 	public ?AbilityList $abilities       = null;
 	public ?CapabilityList $capabilities = null;
@@ -33,22 +33,22 @@ class Pokemon extends Entity
 
 	public function hasLearnMove(Move $move) : bool
 	{
-		return $this->learn_moves->hasMove($move);
+		return $this->learnMoves->hasMove($move);
 	}
 
 	public function hasTutorMove(Move $move) : bool
 	{
-		return $this->tutor_moves->hasMove($move);
+		return $this->tutorMoves->hasMove($move);
 	}
 
 	public function hasEggMove(Move $move) : bool
 	{
-		return $this->egg_moves->hasMove($move);
+		return $this->eggMoves->hasMove($move);
 	}
 
 	public function hasHmTmMove(Move $move) : bool
 	{
-		return $this->hmtm_moves->hasMove($move);
+		return $this->hmtmMoves->hasMove($move);
 	}
 
 	public function hasCapability(Capability $capability) : bool
