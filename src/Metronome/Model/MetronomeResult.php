@@ -5,15 +5,15 @@ namespace PtuDex\Metronome\Model;
 class MetronomeResult extends \Engine\Model\Model
 {
 	public string $name;
-	public ?\PtuDex\Models\PokemonType $type;
+	public ?\PtuDex\Common\Models\PokemonType $type;
 	public string $category;
 	public string $damage;
 	public string $stabDamage;
 	public int $ac;
-	public ?\PtuDex\Models\MoveRange $range;
+	public ?\PtuDex\Common\Models\MoveRange $range;
 	public string $effect;
 
-	public static function fromMove(\PtuDex\Models\Move $move)
+	public static function fromMove(\PtuDex\Common\Models\Move $move)
 	{
 		$result = self::create();
 
@@ -21,7 +21,7 @@ class MetronomeResult extends \Engine\Model\Model
 		$result->type       = $move->type;
 		$result->category   = $move->category;
 		$result->damage     = $move->damage;
-		$result->stabDamage = \PtuDex\Enums\DamageBase::stabifyDB($move->damage);
+		$result->stabDamage = \PtuDex\Common\Enums\DamageBase::stabifyDB($move->damage);
 		$result->ac         = $move->ac;
 		$result->range      = $move->range;
 		$result->effect     = $move->effect;

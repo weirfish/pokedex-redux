@@ -1,0 +1,15 @@
+div#metronome-button-container {
+  width: 100%;
+}
+
+div#metronome-button-container button {
+  width: 25%;
+  margin: 0 10px;
+  height: 3em;
+  cursor: pointer;
+  border-color: #9B6470;
+  background-color: #EE99AC;
+  border-radius: 10px;
+  font-size: 1.2em;
+}
+/*# sourceMappingURL=metronome-button.css.map */

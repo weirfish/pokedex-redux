@@ -12,12 +12,12 @@ class MainMenu extends \Engine\Page\Element\Div
 			->setTitle("Pokedex")
 			->setDescription("A searchable, sortable Pokedex to help you find the perfect pokemon for your build.")
 			->setIconPath(\PtuDex\Home\IconProvider::getPokedexIconPath())
-			->setLinkPath(\PtuDex\Routing\PokedexRoute::$route),
+			->setLinkPath(\PtuDex\Pokedex\Route::$route),
 			MainMenuItem::create()
 			->setTitle("Metronome Roller")
 			->setDescription("A tool to help you roll your Metronomes. Waggle those fingers!")
 			->setIconPath(\PtuDex\Home\IconProvider::getMetronomeIconPath())
-			->setLinkPath(\PtuDex\Routing\MetronomeRoute::$route),
+			->setLinkPath(\PtuDex\Metronome\Route::$route),
 			MainMenuItem::create()
 			->setTitle("Type Coverage Calculator")
 			->setDescription("A tool to help you figure out which types you'll struggle to fight.")

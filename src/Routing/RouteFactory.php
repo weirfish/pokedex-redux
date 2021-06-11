@@ -8,9 +8,9 @@ class RouteFactory extends \Engine\Routing\RouteFactory
 	{
 		return
 		[
-			new HomeRoute(),
-			new PokedexRoute(),
-			new MetronomeRoute()
+			new \PtuDex\Home\Route(),
+			new \PtuDex\Metronome\Route(),
+			new \PtuDex\Pokedex\Route()
 		];
 	}
 

@@ -1,0 +1,61 @@
+table#metronome-results {
+  width: 100%;
+  border: 1px solid #000;
+  border-bottom: 0px;
+  margin: 10px 0px;
+}
+
+table#metronome-results tr {
+  width: 100%;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  border-bottom: 1px solid #000;
+}
+
+table#metronome-results tr td, table#metronome-results tr th {
+  padding: 0 10px;
+  text-align: center;
+}
+
+table#metronome-results tr td:nth-child(1), table#metronome-results tr th:nth-child(1) {
+  min-width: 50px;
+  width: 10%;
+  text-align: cen;
+}
+
+table#metronome-results tr td:nth-child(2), table#metronome-results tr th:nth-child(2) {
+  min-width: 50px;
+  width: 10%;
+}
+
+table#metronome-results tr td:nth-child(3), table#metronome-results tr th:nth-child(3) {
+  min-width: 50px;
+  width: 10%;
+}
+
+table#metronome-results tr td:nth-child(4), table#metronome-results tr th:nth-child(4) {
+  min-width: 50px;
+  width: 15%;
+}
+
+table#metronome-results tr td:nth-child(5), table#metronome-results tr th:nth-child(5) {
+  min-width: 50px;
+  width: 15%;
+}
+
+table#metronome-results tr td:nth-child(6), table#metronome-results tr th:nth-child(6) {
+  min-width: 25px;
+  width: 5%;
+}
+
+table#metronome-results tr td:nth-child(7), table#metronome-results tr th:nth-child(7) {
+  min-width: 50px;
+  width: 20%;
+}
+
+table#metronome-results tr td:nth-child(8), table#metronome-results tr th:nth-child(8) {
+  min-width: 100px;
+  width: 40%;
+  text-align: left;
+}
+/*# sourceMappingURL=metronome-results.css.map */

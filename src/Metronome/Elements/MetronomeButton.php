@@ -10,6 +10,8 @@ class MetronomeButton extends \Engine\Page\Element\Button
 	{
 		$this->setContents("Waggle your fingers {$this->getAmountString()}!");
 
+		$this->addAttribute(new \Engine\Page\Element\Attribute("data-rolls", $this->numberOfRolls));
+
 		return parent::render();
 	}
 

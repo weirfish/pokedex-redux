@@ -4,33 +4,31 @@ namespace PtuDex\Metronome;
 
 class Page extends \Engine\Page\Page
 {
+	public function __construct()
+	{
+		parent::__construct();
+
+		$this->addScript(\PtuDex\Common\JsProvider::getInstance()->getMetronomePageScript());
+	}
+
 	protected function addElements()
 	{
 		$this->addElement
 		(
 			\Engine\Page\Element\Heading::create()
 			->setLevel(1)
-			->setContents("PTUDex - Metronome")
+			->setContents("PTUDex - Metronome Randomiser")
 		);
 
 		$this->addElement
 		(
-			\Engine\Page\Element\Div::create()
-			->setElements
-			([
-				\PtuDex\Metronome\Elements\MetronomeButton::create()
-				->setNumberOfRolls(1),
-				\PtuDex\Metronome\Elements\MetronomeButton::create()
-				->setNumberOfRolls(2),
-				\PtuDex\Metronome\Elements\MetronomeButton::create()
-				->setNumberOfRolls(3),
-			])
+			\PtuDex\Metronome\Elements\MetronomeButtonContainer::create()
 		);
 
 		$this->addElement
 		(
 			\PtuDex\Metronome\Elements\MetronomeResults::create()
-			->setMoves(...\PtuDex\Factories\MoveFactory::getInstance()->getAllMoves())
+			->setMoves(...\PtuDex\Common\Factories\MoveFactory::getInstance()->getAllMetronomeMoves())
 		);
 	}
 }

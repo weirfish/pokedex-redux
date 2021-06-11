@@ -1,0 +1,71 @@
+table#metronome-results
+{
+	width: 100%;
+	border: 1px solid #000;
+	border-bottom: 0px;
+	margin: 10px 0px;
+
+	tr
+	{
+		width: 100%;
+		flex-wrap: nowrap;
+		border-bottom: 1px solid #000;
+		
+		td, th
+		{
+			padding: 0 10px;
+			text-align: center;
+
+			// Name
+			&:nth-child(1)
+			{
+				min-width: 50px;
+				width: 10%;
+				text-align: cen;
+			}
+			// Type
+			&:nth-child(2)
+			{
+				min-width: 50px;
+				width: 10%;
+			}
+			// Category
+			&:nth-child(3)
+			{
+				min-width: 50px;
+				width: 10%;
+			}
+			// Damage
+			&:nth-child(4)
+			{
+				min-width: 50px;
+				width: 15%;
+			}
+			// STAB Damage
+			&:nth-child(5)
+			{
+				min-width: 50px;
+				width: 15%;
+			}
+			// AC
+			&:nth-child(6)
+			{
+				min-width: 25px;
+				width: 5%;
+			}
+			// Range
+			&:nth-child(7)
+			{
+				min-width: 50px;
+				width: 20%;
+			}
+			// Effect
+			&:nth-child(8)
+			{
+				min-width: 100px;
+				width: 40%;
+				text-align: left;
+			}
+		}
+	}
+}

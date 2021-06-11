@@ -2,6 +2,10 @@
 
 include "init.php";
 
+\Engine\ConfigManager::getInstance()
+->addConfigProvider(new \PtuDex\ConfigProvider())
+->addConfigProvider(new \Engine\ConfigProvider());
+
 $route = $_SERVER['REQUEST_URI'];
 
 $route = \Engine\Routing\Router::getInstance()

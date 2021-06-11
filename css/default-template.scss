@@ -1,0 +1,65 @@
+$border: 2px solid #888;
+$darkBg: #AAA;
+$midBg: #CCC;
+$lightBg: #EEE;
+
+$warningBg: #ff7070;
+$warningBrd: #ff2929;
+
+$actionBg: #9ee29e;
+$actionBrd: #247424;
+
+html
+{
+	box-sizing: border-box;
+	justify-content: center;
+	margin: auto;
+}
+
+body
+{
+	max-width: 1200px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+title
+{
+	display:none;
+}
+
+*, *:before, *:after
+{
+	font-family: sans-serif;
+	box-sizing: inherit;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	align-content: space-around;
+	margin-block-end: 0;
+	margin-block-start: 0;
+}
+
+script, datalist
+{
+	display:none;
+}
+
+a
+{
+	display: inline;
+}
+
+h1
+{
+	font-size: 3em;
+	font-weight: bold;
+}
