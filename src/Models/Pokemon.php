@@ -20,7 +20,7 @@ class Pokemon extends Entity
 
 	public function hasType($type) : bool
 	{
-		if(!\Enums\TypeName::isConstantValue($type))
+		if(!\PtuDex\Enums\TypeNames::isConstantValue($type))
 			throw new \LogicException("{$type} isn't a type name");
 
 		return $this->types->hasType($type);

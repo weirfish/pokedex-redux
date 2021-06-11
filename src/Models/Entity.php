@@ -2,7 +2,7 @@
 
 namespace PtuDex\Models;
 
-class Entity extends Model
+class Entity extends \Engine\Model\Model
 {
 	public $name = "";
 	public $description = "";

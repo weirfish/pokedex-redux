@@ -5,7 +5,7 @@ namespace PtuDex\Factories;
 abstract class JsonDrivenFactory extends \Engine\Abstracts\Factory
 {
 	abstract protected function getPath(): string;
-	abstract protected function makeModel(array $data): \PtuDex\Models\Model;
+	abstract protected function makeModel(array $data): \Engine\Model\Model;
 	abstract protected function validateData(array $data): bool;
 
 	public final function __construct()

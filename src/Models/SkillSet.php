@@ -2,7 +2,7 @@
 
 namespace PtuDex\Models;
 
-class SkillSet extends Model
+class SkillSet extends \Engine\Model\Model
 {
 	public $skills = [];
 

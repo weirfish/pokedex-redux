@@ -2,7 +2,7 @@
 
 namespace PtuDex\Models;
 
-class AbilityKeyword
+class AbilityKeyword extends \Engine\Model\Model
 {
 	public String $name         = "";
 	public String $description  = "";

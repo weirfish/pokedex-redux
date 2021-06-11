@@ -21,7 +21,7 @@ class MoveFactory extends JsonDrivenFactory
 		return true;
 	}
 
-	protected function makeModel(array $data): \PtuDex\Models\Model
+	protected function makeModel(array $data): \Engine\Model\Model
 	{
 		$freqData    = explode(" ", $data['frequency']);
 		$freq         = new \PtuDex\Models\MoveFrequency(strtolower($freqData[0]), intval($freqData[1] ?? 0));

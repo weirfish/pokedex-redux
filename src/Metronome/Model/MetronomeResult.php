@@ -2,7 +2,7 @@
 
 namespace PtuDex\Metronome\Model;
 
-class MetronomeResult extends \PtuDex\Models\Model
+class MetronomeResult extends \Engine\Model\Model
 {
 	public string $name;
 	public ?\PtuDex\Models\PokemonType $type;

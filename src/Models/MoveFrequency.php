@@ -2,7 +2,7 @@
 
 namespace PtuDex\Models;
 
-class MoveFrequency extends Model
+class MoveFrequency extends \Engine\Model\Model
 {
 	public string $type   = "";
 	public int $frequency = 0;

@@ -2,8 +2,6 @@
 
 namespace PtuDex\Factories;
 
-use PtuDex\Models\Model;
-
 class AbilityFactory extends JsonDrivenFactory
 {
 	protected function getPath(): string
@@ -11,7 +9,7 @@ class AbilityFactory extends JsonDrivenFactory
 		return \Engine\Util\Paths::getDataPath() . "abilities.json";
 	}
 
-	protected function makeModel(array $data): Model
+	protected function makeModel(array $data): \Engine\Model\Model
 	{
 		return new \PtuDex\Models\Ability
 		(

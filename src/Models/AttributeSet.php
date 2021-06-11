@@ -2,7 +2,7 @@
 
 namespace PtuDex\Models;
 
-class AttributeSet extends Model
+class AttributeSet extends \Engine\Model\Model
 {
 	private $hp             = 0;
 	private $attack         = 0;
@@ -30,9 +30,6 @@ class AttributeSet extends Model
 
 	public function calculateAttribute($stat) : float
 	{
-		if(!\PtuDex\Enums\AttributeNames::isConstantValue($stat))
-			throw new \LogicException("{$stat} is not a valid attribute name");
-
 		switch($stat)
 		{
 			case \PtuDex\Enums\AttributeNames::HP:
@@ -48,6 +45,8 @@ class AttributeSet extends Model
 			case \PtuDex\Enums\AttributeNames::SPEED:
 				return $this->calcAttribute($this->speed, $this->speedStages);
 		}
+
+		throw new \LogicException("{$stat} is not a valid attribute name");
 	}
 
 	private function calcAttribute($score, $cs) : float

@@ -4,7 +4,7 @@ namespace PtuDex\Models;
 
 use Enums\TypeName;
 
-class PokemonType extends Model
+class PokemonType extends \Engine\Model\Model
 {
 	protected string $name = "";
 	protected array $weaknesses = [];

@@ -2,7 +2,7 @@
 
 namespace PtuDex\Models;
 
-class Skill extends Model
+class Skill extends \Engine\Model\Model
 {
 	public string $name = "";
 	public int $rank = 0;

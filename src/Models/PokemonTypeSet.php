@@ -2,7 +2,7 @@
 
 namespace PtuDex\Models;
 
-class PokemonTypeSet extends Model
+class PokemonTypeSet extends \Engine\Model\Model
 {
 	public $types = [];
 
@@ -13,7 +13,7 @@ class PokemonTypeSet extends Model
 
 	public function hasType($typeToFind) : bool
 	{
-		if(!\Enums\TypeName::isConstantValue($typeToFind))
+		if(!\PtuDex\Enums\TypeNames::isConstantValue($typeToFind))
 			throw new \LogicException("{$typeToFind} isn't a type name");
 
 		foreach($this->types as $type)

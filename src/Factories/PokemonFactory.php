@@ -11,7 +11,7 @@ class PokemonFactory extends JsonDrivenFactory
 		return \Engine\Util\Paths::getDataPath() . "pokemon.json";
 	}
 
-	protected function makeModel(array $data): Model 
+	protected function makeModel(array $data): \Engine\Model\Model
 	{
 		$model = new \PtuDex\Models\Pokemon($data['name'], "");
 

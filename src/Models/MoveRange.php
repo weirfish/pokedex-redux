@@ -2,7 +2,7 @@
 
 namespace PtuDex\Models;
 
-class MoveRange extends Model
+class MoveRange extends \Engine\Model\Model
 {
 	public string $rangeType     = \PtuDex\Enums\MoveRangeTypes::MELEE;
 	public int $minimumRange     = 0;
@@ -47,5 +47,7 @@ class MoveRange extends Model
 			case \PtuDex\Enums\MoveRangeTypes::RANGED_BLAST:
 				return $this->minimumRange . ", " . $humanReadable . " " . $this->maximumRange;
 		}
+		
+		return $humanReadable;
 	}
 }

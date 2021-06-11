@@ -26,7 +26,7 @@ class TypeFactory extends JsonDrivenFactory
 		return true;
 	}
 
-	protected function makeModel(array $data): \PtuDex\Models\Model
+	protected function makeModel(array $data): \Engine\Model\Model
 	{
 		return new \PtuDex\Models\PokemonType($data['name']);
 	}
