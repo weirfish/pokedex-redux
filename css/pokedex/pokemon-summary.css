@@ -1,0 +1,168 @@
+.pokemon-summary {
+  width: 100%;
+}
+
+.pokemon-summary > div {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.pokemon-summary > div:first-child {
+  border-bottom: 2px solid #888;
+  cursor: pointer;
+}
+
+.pokemon-summary > div:first-child img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.pokemon-summary > div:first-child > div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 75%;
+          flex: 0 0 75%;
+  border-right: 0;
+}
+
+.pokemon-summary > div:first-child > div > div {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.pokemon-summary > div:first-child > div > div .pokemon-type {
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.pokemon-summary > div:first-child > div > div:first-of-type {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #888;
+}
+
+.pokemon-summary > div:first-child > div > div:last-of-type {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin-top: 10px;
+}
+
+.pokemon-summary > div:first-child > div > div:last-of-type > div {
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  width: 33%;
+  border-right: 1px solid #888;
+}
+
+.pokemon-summary > div:first-child > div > div:last-of-type > div:last-of-type {
+  border-right: 0;
+}
+
+.pokemon-summary > div:first-child > div > div:last-of-type > div > div {
+  width: 100%;
+}
+
+.pokemon-summary > div:last-child {
+  border-bottom: 2px solid #888;
+  border-left: 2px solid #888;
+  border-right: 2px solid #888;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  display: none;
+  background-color: #BBB;
+}
+
+.pokemon-summary > div:last-child > div {
+  width: 25%;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  border-right: 1px solid #888;
+  padding: 10px 0;
+}
+
+.pokemon-summary > div:last-child > div:last-of-type {
+  border-right: 0;
+}
+
+.pokemon-summary > div:last-child > div h3 {
+  padding-bottom: 10px;
+}
+
+.pokemon-summary dl {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  padding: 10px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.pokemon-summary dl > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20%;
+          flex: 1 1 20%;
+}
+
+.pokemon-summary dl > div:first-child dt, .pokemon-summary dl > div:first-child dd {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 10px;
+}
+
+.pokemon-summary dl > div:last-child dt, .pokemon-summary dl > div:last-child dd {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: 10px;
+}
+
+.pokemon-summary dl > div dt, .pokemon-summary dl > div dd {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  margin: 0;
+}
+
+.pokemon-summary ul {
+  margin: 0;
+  padding: 0;
+  -ms-flex-preferred-size: 1 1 100%;
+      flex-basis: 1 1 100%;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+.pokemon-summary ul li {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 51%;
+          flex: 0 0 51%;
+}
+
+.pokemon-summary h3 {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding-left: 2em;
+  -webkit-text-decoration: underline solid #888;
+          text-decoration: underline solid #888;
+}
+/*# sourceMappingURL=pokemon-summary.css.map */

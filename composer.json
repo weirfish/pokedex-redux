@@ -17,6 +17,7 @@
     ],
     "require": {
         "weirweb/engine": "@dev",
+        "weirweb/engine-comparator": "@dev",
         "weirweb/engine-database": "@dev",
         "weirweb/engine-dice": "@dev",
         "weirweb/engine-model": "@dev",
@@ -51,6 +52,10 @@
         {
             "type": "path",
             "url": "../engine-model"
+        },
+        {
+            "type": "path",
+            "url": "../engine-comparator"
         }
     ]
 }

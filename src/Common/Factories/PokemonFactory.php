@@ -18,12 +18,13 @@ class PokemonFactory extends JsonDrivenFactory
 		$model->abilities    = $this->makeAbilityList($data['abilities']);
 		$model->attributes   = $this->makeAttributeSet($data['attributes']);
 		$model->capabilities = $this->makeCapabilityList($data['capabilities']);
-		$model->eggMoves    = $this->makeMoveList($data['moves']['egg'] ?? []);
-		$model->learnMoves  = $this->makeMoveList($data['moves']['learn'] ?? []);
-		$model->tutorMoves  = $this->makeMoveList($data['moves']['hmtm'] ?? []);
-		$model->hmtmMoves   = $this->makeMoveList($data['moves']['tutor'] ?? []);
+		$model->eggMoves     = $this->makeMoveList($data['moves']['egg'] ?? []);
+		$model->learnMoves   = $this->makeMoveList($data['moves']['learn'] ?? []);
+		$model->tutorMoves   = $this->makeMoveList($data['moves']['hmtm'] ?? []);
+		$model->hmtmMoves    = $this->makeMoveList($data['moves']['tutor'] ?? []);
 		$model->skills       = $this->makeSkillSet($data['skills']);
 		$model->types        = $this->makeTypeSet($data['types']);
+		$model->id           = $data['id'] ?? 0;
 
 		return $model;
 	}
@@ -121,6 +122,11 @@ class PokemonFactory extends JsonDrivenFactory
 	public function getPokemonByName(string $name) : \PtuDex\Common\Models\Pokemon
 	{
 		return $this->get($name);
+	}
+
+	public function getAllPokemon()
+	{
+		return $this->getAll();
 	}
 
 }

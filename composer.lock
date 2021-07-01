@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eb96ce2f73c7daf563833cc8f58d4513",
+    "content-hash": "fc226c376efe073cea930e905bcfd0fc",
     "packages": [
         {
             "name": "weirweb/engine",
@@ -12,7 +12,7 @@
             "dist": {
                 "type": "path",
                 "url": "../engine",
-                "reference": "d56a1fbf8d44c54533a03c512dd926befa6618c2"
+                "reference": "2f0ba65e121b58ee8edda5a3ff83212f10c0318a"
             },
             "require-dev": {
                 "phpstan/phpstan": "^0.12.81",
@@ -36,12 +36,45 @@
             }
         },
         {
+            "name": "weirweb/engine-comparator",
+            "version": "0.1",
+            "dist": {
+                "type": "path",
+                "url": "../engine-comparator",
+                "reference": "f712bcd81d68bbd70fda58beb433a2897ee46ee3"
+            },
+            "require": {
+                "weirweb/engine": "@dev"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.12.81",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "Engine\\Comparator\\": "src",
+                    "Engine\\Comparator\\Test\\": "test"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Thomas Pearce",
+                    "email": "github@tpearce.net"
+                }
+            ],
+            "description": "Weirweb Engine - A Comparator Module",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "weirweb/engine-database",
             "version": "0.1",
             "dist": {
                 "type": "path",
                 "url": "../engine-database",
-                "reference": "2c10ec77f2765135732a425634bec0ddddf9ed5e"
+                "reference": "bed3234751eb0a64092da669528e10ed84b93aac"
             },
             "require": {
                 "weirweb/engine": "@dev"
@@ -74,7 +107,7 @@
             "dist": {
                 "type": "path",
                 "url": "../engine-dice",
-                "reference": "d75488b05376e5155b7d05d4ecfada81fa6058cd"
+                "reference": "27f7173310091982d174d565bb5e3d181d90b4d4"
             },
             "require": {
                 "weirweb/engine": "@dev"
@@ -140,7 +173,7 @@
             "dist": {
                 "type": "path",
                 "url": "../engine-page",
-                "reference": "3960a14f392af44b921a1b6646da1c96ae48c77d"
+                "reference": "cfd47a650d230c6b468dede686c4cdbf29b4d3a6"
             },
             "require": {
                 "weirweb/engine": "@dev",
@@ -167,7 +200,7 @@
             "dist": {
                 "type": "path",
                 "url": "../engine-routing",
-                "reference": "414025d912b6550576a32ca416f775444bc47abc"
+                "reference": "f483060f65d5f468fe812c68cb29008305a9f5dc"
             },
             "require": {
                 "weirweb/engine": "@dev",
@@ -2350,6 +2383,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "weirweb/engine": 20,
+        "weirweb/engine-comparator": 20,
         "weirweb/engine-database": 20,
         "weirweb/engine-dice": 20,
         "weirweb/engine-model": 20,

@@ -68,4 +68,18 @@ h1 {
   font-size: 3em;
   font-weight: bold;
 }
+
+.pagination_button {
+  text-decoration: none;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.pagination_button.selected button {
+  font-weight: bold;
+}
+
+.pagination_button button {
+  font-size: 1em;
+}
 /*# sourceMappingURL=default-template.css.map */

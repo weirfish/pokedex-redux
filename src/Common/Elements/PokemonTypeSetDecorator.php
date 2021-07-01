@@ -10,6 +10,7 @@ class PokemonTypeSetDecorator extends \Engine\Page\Element\Decorator
 
 		$this->addStyle(\PtuDex\Common\CssProvider::getInstance()->getPokemonTypeDecoratorCss());
 	}
+
 	public function render() : string
 	{
 		$elements = [];

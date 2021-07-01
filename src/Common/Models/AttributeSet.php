@@ -4,12 +4,12 @@ namespace PtuDex\Common\Models;
 
 class AttributeSet extends \Engine\Model\Model
 {
-	private $hp             = 0;
-	private $attack         = 0;
-	private $defense        = 0;
-	private $specialAttack  = 0;
-	private $specialDefense = 0;
-	private $speed          = 0;
+	public $hp             = 0;
+	public $attack         = 0;
+	public $defense        = 0;
+	public $specialAttack  = 0;
+	public $specialDefense = 0;
+	public $speed          = 0;
 
 	private $hpStages              = 0;
 	private $attackStages          = 0;
