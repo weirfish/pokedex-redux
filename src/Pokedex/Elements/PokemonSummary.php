@@ -12,8 +12,8 @@ class PokemonSummary extends \Engine\Page\Element\Div
 
 	public function __construct()
 	{
-		$this->addStyle(\Engine\AssetLinkProvider::getInstance()->getCssPath("pokedex/pokemon-summary"));
-		$this->addScript(\Engine\AssetLinkProvider::getInstance()->getJsPath("pokemon-summary"));
+		$this->addStyle(\PtuDex\Common\AssetLinkProvider::getInstance()->getCssPath("pokedex/pokemon-summary"));
+		$this->addScript(\PtuDex\Common\AssetLinkProvider::getInstance()->getJsPath("pokemon-summary"));
 		$this->addAttribute(new \Engine\Page\Element\Attribute("class", "pokemon-summary"));
 	}
 	
@@ -24,7 +24,7 @@ class PokemonSummary extends \Engine\Page\Element\Div
 			\Engine\Page\Element\Div::create()
 			->setElements([
 				\Engine\Page\Element\Image::create()
-				->setSrc(\Engine\AssetLinkProvider::getInstance()->getPokemonImgPath($this->pokemon)),
+				->setSrc(\PtuDex\Common\AssetLinkProvider::getInstance()->getPokemonImgPath($this->pokemon)),
 				\Engine\Page\Element\Div::create()
 				->setElements
 				([

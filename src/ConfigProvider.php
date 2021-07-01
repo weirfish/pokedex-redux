@@ -23,5 +23,7 @@ class ConfigProvider extends \Engine\ConfigProvider
 			case \Engine\Database\Config::DATABASE_PASSWORD:
 				return "ptudex";
 		}
+
+		return parent::get($key);
 	}
 }
