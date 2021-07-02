@@ -1,0 +1,39 @@
+form.pokedex-search
+{
+	width: 95%;
+	padding: 10px;
+	margin: 20px;
+	position: sticky;
+	top: 10px;
+	background-color: #888;
+	background-origin: padding-box;
+
+	input
+	{
+		font-size: 1em;
+		padding: 10px;
+		min-width: 0;
+
+		&[name=search]
+		{
+			flex: 1 1 auto;
+			border-radius: 0;
+			border: 1px solid #888;
+		}
+	
+		&[name=submit]
+		{
+			flex: 0 0 auto;
+			border-radius: 0;
+			border: 1px solid #888;
+			border-left: 0;
+			cursor: pointer;
+
+			&:hover
+			{
+				background-color: #DDD;
+			}
+		}
+	}
+
+}

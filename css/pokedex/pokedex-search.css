@@ -1,0 +1,39 @@
+form.pokedex-search {
+  width: 95%;
+  padding: 10px;
+  margin: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+  background-color: #888;
+  background-origin: padding-box;
+}
+
+form.pokedex-search input {
+  font-size: 1em;
+  padding: 10px;
+  min-width: 0;
+}
+
+form.pokedex-search input[name=search] {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  border-radius: 0;
+  border: 1px solid #888;
+}
+
+form.pokedex-search input[name=submit] {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  border-radius: 0;
+  border: 1px solid #888;
+  border-left: 0;
+  cursor: pointer;
+}
+
+form.pokedex-search input[name=submit]:hover {
+  background-color: #DDD;
+}
+/*# sourceMappingURL=pokedex-search.css.map */

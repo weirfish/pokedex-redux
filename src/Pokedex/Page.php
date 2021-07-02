@@ -23,11 +23,6 @@ class Page extends \Engine\Page\Page
 			\PtuDex\Pokedex\Elements\PokedexSearch::create()
 		);
 
-		$this->addElement
-		(
-			\PtuDex\Pokedex\Elements\PokedexFilter::create()
-		);
-
 		// @TODO Make criteria for factories
 		$pokemon = $poke_factory->getAllPokemon();
 		$current_page = \Engine\Routing\Url::currentPage()->getQueryValue("page") ?? 1;

@@ -10,15 +10,15 @@
   width: auto;
   border-width: 3px 0px;
   border-style: solid;
-  padding: 0.1em;
+  padding: 0.1em 0.2em;
 }
 
 .pokemon-type div:first-child {
   border-top-left-radius: 0.7em;
   border-bottom-left-radius: 0.7em;
-  margin-left: 2px;
+  margin-left: 2;
   border-left-width: 3px;
-  padding-left: 0.2em;
+  padding-left: 0.4em;
 }
 
 .pokemon-type div:last-child {
@@ -26,7 +26,7 @@
   border-bottom-right-radius: 0.7em;
   margin-right: 2px;
   border-right-width: 3px;
-  padding-right: 0.2em;
+  padding-right: 0.4em;
 }
 
 .pokemon-type .type-normal {

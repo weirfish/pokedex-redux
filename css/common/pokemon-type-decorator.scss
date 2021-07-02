@@ -14,15 +14,15 @@ $borderWidth: 3px;
 
 		border-width: $borderWidth 0px;
 		border-style: solid;
-		padding: 0.1em;
+		padding: 0.1em 0.2em;
 	
 		&:first-child
 		{
 			border-top-left-radius: 0.7em;
 			border-bottom-left-radius: 0.7em;
-			margin-left: 2px;
+			margin-left: 2;
 			border-left-width: $borderWidth;
-			padding-left: 0.2em;
+			padding-left: 0.4em;
 		}
 		&:last-child
 		{
@@ -30,7 +30,7 @@ $borderWidth: 3px;
 			border-bottom-right-radius: 0.7em;
 			margin-right: 2px;
 			border-right-width: $borderWidth;
-			padding-right: 0.2em;
+			padding-right: 0.4em;
 		}
 	}
 	
