@@ -8,7 +8,9 @@ class PokemonNameRule extends Rule
 
 	public function apply(\Engine\Model\Model $model): bool
 	{
-		return $this->getComparatorObject()
+		$result = $this->getComparatorObject()
 		->check($model->getName());
+
+		return $result;
 	}
 }

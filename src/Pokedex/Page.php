@@ -10,6 +10,10 @@ class Page extends \Engine\Page\Page
 	protected function addElements()
 	{
 		$poke_factory = \PtuDex\Common\Factories\PokemonFactory::getInstance();
+		$rules        = \PtuDex\Pokedex\Service\Search\SearchStringInterpreter::create()
+		->setSearchString($this->get['search'])
+		->run()
+		->getRules();
 
 		$this->addElement
 		(
@@ -21,14 +25,21 @@ class Page extends \Engine\Page\Page
 		$this->addElement
 		(
 			\PtuDex\Pokedex\Elements\PokedexSearch::create()
+			->setSearchString($this->get['search'])
 		);
 
 		// @TODO Make criteria for factories
-		$pokemon = $poke_factory->getAllPokemon();
-		$current_page = \Engine\Routing\Url::currentPage()->getQueryValue("page") ?? 1;
-		$current_page--;
+		$pokemon = \PtuDex\Pokedex\Service\Filters\Filter::create()
+		->setRules($rules)
+		->setModels($poke_factory->getAllPokemon())
+		->filter();
 
-		$pokemon = array_slice($pokemon, $current_page * self::ITEMS_PER_PAGE, self::ITEMS_PER_PAGE);
+		$paginationCount = count($pokemon);
+
+		$currentPage = \Engine\Routing\Url::currentPage()->getQueryValue("page") ?? 1;
+		$currentPage--;
+
+		$pokemon = array_slice($pokemon, $currentPage * self::ITEMS_PER_PAGE, self::ITEMS_PER_PAGE);
 
 		$this->addElement
 		(
@@ -39,7 +50,7 @@ class Page extends \Engine\Page\Page
 		$this->addElement
 		(
 			\Engine\Page\Element\PaginationElement::create()
-			->setItemCount($poke_factory->countAll())
+			->setItemCount($paginationCount)
 			->setItemsPerPage(self::ITEMS_PER_PAGE)
 			->setPageOffset(\Engine\Routing\Url::currentPage()->getQueryValue("page") ?? 1)
 			->setPagesEitherSide(self::PAGES_TO_PAGINATE)
