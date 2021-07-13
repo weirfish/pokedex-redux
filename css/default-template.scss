@@ -33,7 +33,7 @@ title
 *, *:before, *:after
 {
 	font-family: sans-serif;
-	box-sizing: inherit;
+	box-sizing: border-box;
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
@@ -79,5 +79,17 @@ h1
 	{
 		font-size: 1em;
 		padding: 1em;
+	}
+}
+
+#home-button
+{
+	position:absolute;
+	top:0;
+	left:0;
+
+	.material-icons
+	{
+		font-size: 4em;
 	}
 }

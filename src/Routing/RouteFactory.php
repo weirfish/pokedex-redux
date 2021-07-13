@@ -10,7 +10,8 @@ class RouteFactory extends \Engine\Routing\RouteFactory
 		[
 			new \PtuDex\Home\Route(),
 			new \PtuDex\Metronome\Route(),
-			new \PtuDex\Pokedex\Route()
+			new \PtuDex\Pokedex\Route(),
+			new \PtuDex\CoverageCalculator\Route(),
 		];
 	}
 

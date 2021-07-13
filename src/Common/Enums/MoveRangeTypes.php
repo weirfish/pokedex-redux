@@ -4,23 +4,23 @@ namespace PtuDex\Common\Enums;
 
 class MoveRangeTypes extends \Engine\Abstracts\Enum
 {
-	const PREFIX              = "moveRangeTypes.";
+	const PREFIX              = "moveRangeTypes";
 
-	const MELEE               = "moveRangeTypes.melee";
-	const RANGED              = "moveRangeTypes.ranged";
-	const RANGED_BLAST        = "moveRangeTypes.rangedBlast";
-	const BURST               = "moveRangeTypes.burst";
-	const CARDINALLY_ADJACENT = "moveRangeTypes.cardinallyAdjacent";
-	const ADJACENT            = "moveRangeTypes.adjacent";
-	const CLOSE_BLAST         = "moveRangeTypes.closeBlast";
-	const CONE                = "moveRangeTypes.cone";
-	const LINE                = "moveRangeTypes.line";
-	const HAZARD              = "moveRangeTypes.hazard";
-	const NONE                = "moveRangeTypes.none";
-	const MRT_SELF            = "moveRangeTypes.self";
-	const SPECIAL             = "moveRangeTypes.special";
-	const FIELD               = "moveRangeTypes.field";
-	const BLESSING            = "moveRangeTypes.blessing";
+	const MELEE               = "melee";
+	const RANGED              = "ranged";
+	const RANGED_BLAST        = "rangedBlast";
+	const BURST               = "burst";
+	const CARDINALLY_ADJACENT = "cardinallyAdjacent";
+	const ADJACENT            = "adjacent";
+	const CLOSE_BLAST         = "closeBlast";
+	const CONE                = "cone";
+	const LINE                = "line";
+	const HAZARD              = "hazard";
+	const NONE                = "none";
+	const MRT_SELF            = "self";
+	const SPECIAL             = "special";
+	const FIELD               = "field";
+	const BLESSING            = "blessing";
 
 	public static function getRegexForType($type) : string
 	{

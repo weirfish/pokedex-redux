@@ -9,7 +9,7 @@ class PokemonNameRule extends Rule
 	public function apply(\Engine\Model\Model $model): bool
 	{
 		$result = $this->getComparatorObject()
-		->check($model->getName());
+		->check(ucwords($model->getName()));
 
 		return $result;
 	}

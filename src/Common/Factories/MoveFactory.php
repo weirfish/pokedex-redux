@@ -144,7 +144,7 @@ class MoveFactory extends JsonDrivenFactory
 		$move = $this->get($name);
 		
 		if(null === $move)
-			throw new \LogicException("Move {$name} not found");
+			throw new \PtuDex\Common\Factories\Exception\ItemNotFoundException("Move {$name} not found");
 
 		return $move;
 	}

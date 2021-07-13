@@ -4,11 +4,11 @@ namespace PtuDex\Common\Enums;
 
 class MoveCategories extends \Engine\Abstracts\Enum
 {
-	const PREFIX    = "moveCategory.";
+	const PREFIX    = "moveCategory";
 
-	const SPECIAL   = "moveCategory.special";
-	const PHYSICAL  = "moveCategory.physical";
-	const STATUS    = "moveCategory.status";
-	const MC_STATIC = "moveCategory.static";
-	const NONE      = "moveCategory.none";
+	const SPECIAL   = "special";
+	const PHYSICAL  = "physical";
+	const STATUS    = "status";
+	const MC_STATIC = "static";
+	const NONE      = "none";
 }

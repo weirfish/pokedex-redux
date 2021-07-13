@@ -11,7 +11,7 @@ class SearchStringInterpreter
 
 	public function run()
 	{
-		$stringParts = explode(" ", $this->searchString);
+		$stringParts = $this->parseSearchString();
 
 		if(count($stringParts) == 0 || $stringParts[0] == "")
 			return $this;
@@ -22,6 +22,40 @@ class SearchStringInterpreter
 		}
 
 		return $this;
+	}
+
+	private function parseSearchString()
+	{
+		$tokens = [];
+
+		$currentToken = "";
+		$depth        = 0;
+		$quoting      = false;
+
+		foreach(str_split($this->searchString) as $char)
+		{
+			if($char === " " && $depth === 0 && $quoting === false)
+			{
+				$tokens[]     = $currentToken;
+				$currentToken = "";
+				continue;
+			}
+
+			if($char === "(")
+				$depth++;
+
+			if($char === ")")
+				$depth--;
+
+			if($char === "\"")
+				$quoting = !$quoting;
+			else 
+				$currentToken .= $char;
+		}
+
+		$tokens[] = $currentToken;
+
+		return $tokens;
 	}
 	
 	public function getRules() : array

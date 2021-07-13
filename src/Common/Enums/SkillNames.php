@@ -4,23 +4,25 @@ namespace PtuDex\Common\Enums;
 
 class SkillNames extends \Engine\Abstracts\Enum
 {
-	const ACROBATICS           = "skill.acrobatics";
-	const ATHLETICS            = "skill.athletics";
-	const CHARM                = "skill.charm";
-	const COMBAT               = "skill.combat";
-	const COMMAND              = "skill.command";
-	const GENERAL_EDUCATION    = "skill.generalEducation";
-	const MEDICINE_EDUCATION   = "skill.medicineEducation";
-	const OCCULT_EDUCATION     = "skill.occultEducation";
-	const POKEMON_EDUCATION    = "skill.pokemonEducation";
-	const TECHNOLOGY_EDUCATION = "skill.technologyEducation";
-	const FOCUS                = "skill.focus";
-	const GUILE                = "skill.guile";
-	const INTIMIDATE           = "skill.intimidate";
-	const INTUITION            = "skill.intuition";
-	const PERCEPTION           = "skill.perception";
-	const STEALTH              = "skill.stealth";
-	const SURVIVAL             = "skill.survival";
+	const PREFIX               = "skill";
+
+	const ACROBATICS           = "acrobatics";
+	const ATHLETICS            = "athletics";
+	const CHARM                = "charm";
+	const COMBAT               = "combat";
+	const COMMAND              = "command";
+	const GENERAL_EDUCATION    = "generalEducation";
+	const MEDICINE_EDUCATION   = "medicineEducation";
+	const OCCULT_EDUCATION     = "occultEducation";
+	const POKEMON_EDUCATION    = "pokemonEducation";
+	const TECHNOLOGY_EDUCATION = "technologyEducation";
+	const FOCUS                = "focus";
+	const GUILE                = "guile";
+	const INTIMIDATE           = "intimidate";
+	const INTUITION            = "intuition";
+	const PERCEPTION           = "perception";
+	const STEALTH              = "stealth";
+	const SURVIVAL             = "survival";
 
 	public static function getBodySkills() : array
 	{

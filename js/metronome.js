@@ -3,6 +3,8 @@ $(document).ready(function(){
 	{
 		var numberToGet = $(event.target).data("rolls");
 
+		$('#metronome-results').css("display", "inherit");
+
 		var rows = $('#metronome-results tr:not(:first-child)');
 
 		if(rows.length < numberToGet)

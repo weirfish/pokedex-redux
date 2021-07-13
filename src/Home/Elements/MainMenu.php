@@ -26,11 +26,12 @@ class MainMenu extends \Engine\Page\Element\Div
 			MainMenuItem::create()
 			->setTitle("Type Coverage Calculator")
 			->setDescription("A tool to help you figure out which types you'll struggle to fight.")
-			->setIconPath(\PtuDex\Home\IconProvider::getTypeCoverageIconPath()),
-			MainMenuItem::create()
-			->setTitle("Comparative Damage Calculator")
-			->setDescription("A tool to help you figure out who's doing more damage.")
-			->setIconPath(\PtuDex\Home\IconProvider::getDamageCalculatorIconPath())
+			->setIconPath(\PtuDex\Home\IconProvider::getTypeCoverageIconPath())
+			->setLinkPath(\PtuDex\CoverageCalculator\Route::$route),
+			// MainMenuItem::create()
+			// ->setTitle("Comparative Damage Calculator")
+			// ->setDescription("A tool to help you figure out who's doing more damage.")
+			// ->setIconPath(\PtuDex\Home\IconProvider::getDamageCalculatorIconPath())
 		]);
 
 		return parent::render();

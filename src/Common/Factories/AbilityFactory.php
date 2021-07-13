@@ -28,7 +28,12 @@ class AbilityFactory extends JsonDrivenFactory
 
 	public function getAbility(string $name) : \PtuDex\Common\Models\Ability
 	{
-		return $this->get($name);
+		$ability = $this->get($name);
+		
+		if(null === $ability)
+			throw new \PtuDex\Common\Factories\Exception\ItemNotFoundException("Ability {$name} not found");
+
+		return $ability;
 	}
 
 	public function getAllAbilities() : array

@@ -17,7 +17,7 @@ class Page extends \Engine\Page\Page
 		(
 			\Engine\Page\Element\Heading::create()
 			->setLevel(1)
-			->setContents("PTUDex - Metronome Randomiser")
+			->setContents("Metronome Randomiser")
 		);
 
 		$this->addElement

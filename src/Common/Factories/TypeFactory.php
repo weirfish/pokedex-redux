@@ -14,7 +14,7 @@ class TypeFactory extends JsonDrivenFactory
 	protected function validateData(array $data): bool
 	{
 		if(!\PtuDex\Common\Enums\TypeNames::isConstantValue($data['name']))
-			throw new \LogicException("Type {$data['type']} is not valid");
+			throw new \LogicException("Type {$data['name']} is not valid");
 
 		if(!is_array($data['resistances']))
 			throw new \LogicException("Resistances were missing or malformed for {$data['type']}.");

@@ -12,7 +12,7 @@ class PokemonHmtmMoveListRule extends Rule
 	public function apply(\Engine\Model\Model $model): bool
 	{
 		$move = \PtuDex\Common\Factories\MoveFactory::getInstance()
-		->getMove($this->getValue());
+		->getMove(ucwords($this->getValue()));
 
 		return $model->hasHmTmMove($move);
 	}

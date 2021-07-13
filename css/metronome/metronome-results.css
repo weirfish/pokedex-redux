@@ -3,6 +3,7 @@ table#metronome-results {
   border: 1px solid #000;
   border-bottom: 0px;
   margin: 10px 0px;
+  display: none;
 }
 
 table#metronome-results tr {

@@ -4,12 +4,12 @@ namespace PtuDex\Common\Enums;
 
 class MoveFrequencyTypes extends \Engine\Abstracts\Enum
 {
-	const PREFIX    = "moveFrequencyTypes.";
+	const PREFIX    = "moveFrequencyTypes";
 
-	const AT_WILL   = "moveFrequencyTypes.at-will";
-	const EOT       = "moveFrequencyTypes.eot";
-	const SCENE     = "moveFrequencyTypes.scene";
-	const DAILY     = "moveFrequencyTypes.daily";
-	const SPECIAL   = "moveFrequencyTypes.special";
-	const MF_STATIC = "moveFrequencyTypes.static";
+	const AT_WILL   = "at-will";
+	const EOT       = "eot";
+	const SCENE     = "scene";
+	const DAILY     = "daily";
+	const SPECIAL   = "special";
+	const MF_STATIC = "static";
 }

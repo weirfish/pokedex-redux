@@ -124,7 +124,7 @@ class PokemonSummary extends \Engine\Page\Element\Div
 			new \Engine\Page\Element\Model\DataListEntry("Speed",           $attributes->getSpeed()),
 		];
 
-		return \Engine\Page\Element\DataList::create()
+		return \Engine\Page\Element\DescriptionList::create()
 		->setEntries(...$entries);
 	}
 
@@ -142,7 +142,7 @@ class PokemonSummary extends \Engine\Page\Element\Div
 			$entries[] = new \Engine\Page\Element\Model\DataListEntry($moveListEntry->entity->name, $moveListEntry->level);
 		};
 
-		return \Engine\Page\Element\DataList::create()
+		return \Engine\Page\Element\DescriptionList::create()
 		->setEntries(...$entries)
 		->setReverse();
 	}
@@ -188,7 +188,7 @@ class PokemonSummary extends \Engine\Page\Element\Div
 			$entries[] = new \Engine\Page\Element\Model\DataListEntry($abilityListEntry->entity->name, $heading);
 		}
 
-		return \Engine\Page\Element\DataList::create()
+		return \Engine\Page\Element\DescriptionList::create()
 		->setEntries(...$entries)
 		->setReverse(true);
 	}

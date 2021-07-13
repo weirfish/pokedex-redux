@@ -11,7 +11,7 @@ class Page extends \Engine\Page\Page
 	{
 		$poke_factory = \PtuDex\Common\Factories\PokemonFactory::getInstance();
 		$rules        = \PtuDex\Pokedex\Service\Search\SearchStringInterpreter::create()
-		->setSearchString($this->get['search'])
+		->setSearchString($this->get['search'] ?? "")
 		->run()
 		->getRules();
 
@@ -19,13 +19,13 @@ class Page extends \Engine\Page\Page
 		(
 			\Engine\Page\Element\Heading::create()
 			->setLevel(1)
-			->setContents("PTUDex - Pokedex")
+			->setContents("Pokedex")
 		);
 
 		$this->addElement
 		(
 			\PtuDex\Pokedex\Elements\PokedexSearch::create()
-			->setSearchString($this->get['search'])
+			->setSearchString($this->get['search'] ?? "")
 		);
 
 		// @TODO Make criteria for factories

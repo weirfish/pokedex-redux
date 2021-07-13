@@ -30,8 +30,8 @@ title {
 
 *, *:before, *:after {
   font-family: sans-serif;
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -82,5 +82,15 @@ h1 {
 .pagination_button button {
   font-size: 1em;
   padding: 1em;
+}
+
+#home-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#home-button .material-icons {
+  font-size: 4em;
 }
 /*# sourceMappingURL=default-template.css.map */

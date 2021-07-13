@@ -32,7 +32,7 @@ class SkillSet extends \Engine\Model\Model
 
 	public function getSkill($name) : Skill
 	{
-		if(!\PtuDex\Common\Enums\SkillNames::isConstantValue($name, false))
+		if(!\PtuDex\Common\Enums\SkillNames::isConstantValue($name))
 			throw new \LogicException("{$name} is not a valid skill name");
 
 		foreach($this->skills as $skill)
@@ -44,7 +44,7 @@ class SkillSet extends \Engine\Model\Model
 
 	public function setSkill($name, $rank, $modifier) : self
 	{
-		if(!\PtuDex\Common\Enums\SkillNames::isConstantValue($name, false))
+		if(!\PtuDex\Common\Enums\SkillNames::isConstantValue($name))
 			throw new \LogicException("{$name} is not a valid skill name");
 
 		foreach($this->skills as $skill)

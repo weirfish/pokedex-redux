@@ -9,6 +9,7 @@ class Template extends \Engine\Page\Template\Template
 ?><html>
 	<head>
 		<link rel="stylesheet" href="/css/default-template.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script><?php
 	}
 
@@ -19,7 +20,8 @@ class Template extends \Engine\Page\Template\Template
 
 	protected function outputBodyOpen(): void
 	{
-?><body><?php
+?><body>
+	<a id="home-button" href="/"><span class="material-icons">home</span></a><?php
 	}
 
 

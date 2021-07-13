@@ -9,7 +9,7 @@ class MoveFrequency extends \Engine\Model\Model
 
 	public function __construct($type, $frequency = 0)
 	{
-		if(!\PtuDex\Common\Enums\MoveFrequencyTypes::isConstantValue($type, false))
+		if(!\PtuDex\Common\Enums\MoveFrequencyTypes::isConstantValue($type))
 			throw new \LogicException("Type {$type} is not a valid move frequency type.");
 
 		$this->type      = $type;

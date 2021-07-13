@@ -25,4 +25,9 @@ class CssProvider
 	{
 		return \Engine\AssetLinkProvider::getInstance()->getCssPath("home/home");
 	}
+
+	public function getCoverageCalculatorCss()
+	{
+		return AssetLinkProvider::getInstance()->getCssPath("coverage-calculator/form");
+	}
 }
