@@ -56,6 +56,34 @@
         {
             "type": "path",
             "url": "../engine-comparator"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:t-pearce/engine.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:t-pearce/engine-routing.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:t-pearce/engine-database.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:t-pearce/engine-page.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:t-pearce/engine-dice.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:t-pearce/engine-model.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:t-pearce/engine-comparator.git"
         }
     ]
 }

@@ -4,15 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fc226c376efe073cea930e905bcfd0fc",
+    "content-hash": "c62a659a278ad6acac00d8c577a9f683",
     "packages": [
         {
             "name": "weirweb/engine",
-            "version": "0.1",
+            "version": "1.0",
             "dist": {
                 "type": "path",
                 "url": "../engine",
-                "reference": "2f0ba65e121b58ee8edda5a3ff83212f10c0318a"
+                "reference": "8bba003891be4295739e596e2c714947f3f57d9f"
             },
             "require-dev": {
                 "phpstan/phpstan": "^0.12.81",
@@ -37,11 +37,11 @@
         },
         {
             "name": "weirweb/engine-comparator",
-            "version": "0.1",
+            "version": "1.0",
             "dist": {
                 "type": "path",
                 "url": "../engine-comparator",
-                "reference": "f712bcd81d68bbd70fda58beb433a2897ee46ee3"
+                "reference": "0fe020dc1372f4b65d3487fffc599418652ef746"
             },
             "require": {
                 "weirweb/engine": "@dev"
@@ -70,11 +70,11 @@
         },
         {
             "name": "weirweb/engine-database",
-            "version": "0.1",
+            "version": "1.0",
             "dist": {
                 "type": "path",
                 "url": "../engine-database",
-                "reference": "bed3234751eb0a64092da669528e10ed84b93aac"
+                "reference": "ecceec7cc84ef1bb0e5c623a7eb88efecda220c9"
             },
             "require": {
                 "weirweb/engine": "@dev"
@@ -103,11 +103,11 @@
         },
         {
             "name": "weirweb/engine-dice",
-            "version": "0.1",
+            "version": "1.0",
             "dist": {
                 "type": "path",
                 "url": "../engine-dice",
-                "reference": "27f7173310091982d174d565bb5e3d181d90b4d4"
+                "reference": "e899b9eeec91eb0b8d9dfb8a8b1cb1f277cee21d"
             },
             "require": {
                 "weirweb/engine": "@dev"
@@ -136,11 +136,11 @@
         },
         {
             "name": "weirweb/engine-model",
-            "version": "0.1",
+            "version": "1.0",
             "dist": {
                 "type": "path",
                 "url": "../engine-model",
-                "reference": "42fcad1be1f25626f626f333e6d74c81595e1050"
+                "reference": "4912ea93b816054d5264aefae13304da8c82d285"
             },
             "require": {
                 "weirweb/engine": "@dev"
@@ -169,11 +169,11 @@
         },
         {
             "name": "weirweb/engine-page",
-            "version": "0.1",
+            "version": "1.0",
             "dist": {
                 "type": "path",
                 "url": "../engine-page",
-                "reference": "cfd47a650d230c6b468dede686c4cdbf29b4d3a6"
+                "reference": "49a04d09fac561ab028babbcd0083f5d4a0e877f"
             },
             "require": {
                 "weirweb/engine": "@dev",
@@ -196,11 +196,11 @@
         },
         {
             "name": "weirweb/engine-routing",
-            "version": "0.1",
+            "version": "1.0",
             "dist": {
                 "type": "path",
                 "url": "../engine-routing",
-                "reference": "f483060f65d5f468fe812c68cb29008305a9f5dc"
+                "reference": "2aad34d35c72c994a6d5decd6b24c3d029b56c66"
             },
             "require": {
                 "weirweb/engine": "@dev",
