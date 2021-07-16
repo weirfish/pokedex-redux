@@ -1,4 +1,4 @@
-# TODO
+# [1.0]
 ## Features
 - Capability factory
 - Ability Factory
