@@ -1,6 +1,7 @@
 .pokemon-summary
 {
 	width: 100%;
+	padding: 10px 0 0 0;
 
 	&>div // Each row
 	{
@@ -103,33 +104,32 @@
 		padding: 10px;
 		justify-content: flex-start;
 
-		&>div
+		dt, dd
 		{
-			flex: 1 1 20%;
+			margin: 0;
+			flex-wrap: nowrap;
 
-			&:first-child
+			&:nth-child(even)
 			{
-				dt, dd
-				{
-					justify-content: flex-end;
-					padding-right: 10px;
-				}
+				justify-content: flex-start;
+				padding-left: 10px;
 			}
 
-			&:last-child
+			&:nth-child(odd)
 			{
-				dt, dd
-				{
-					justify-content: flex-start;
-					padding-left: 10px;
-				}
+				justify-content: flex-end;
+				padding-right: 10px;
 			}
+		}
 
-			dt, dd
-			{
-				flex: 1 1 100%;
-				margin: 0;
-			}
+		dd
+		{
+			flex: 0 1 34%;
+		}
+
+		dt
+		{
+			flex: 1 0 34%;
 		}
 	}
 

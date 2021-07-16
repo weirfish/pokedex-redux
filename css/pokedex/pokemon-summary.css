@@ -1,5 +1,6 @@
 .pokemon-summary {
   width: 100%;
+  padding: 10px 0 0 0;
 }
 
 .pokemon-summary > div {
@@ -109,31 +110,36 @@
           justify-content: flex-start;
 }
 
-.pokemon-summary dl > div {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 20%;
-          flex: 1 1 20%;
+.pokemon-summary dl dt, .pokemon-summary dl dd {
+  margin: 0;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
-.pokemon-summary dl > div:first-child dt, .pokemon-summary dl > div:first-child dd {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  padding-right: 10px;
-}
-
-.pokemon-summary dl > div:last-child dt, .pokemon-summary dl > div:last-child dd {
+.pokemon-summary dl dt:nth-child(even), .pokemon-summary dl dd:nth-child(even) {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   padding-left: 10px;
 }
 
-.pokemon-summary dl > div dt, .pokemon-summary dl > div dd {
+.pokemon-summary dl dt:nth-child(odd), .pokemon-summary dl dd:nth-child(odd) {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 10px;
+}
+
+.pokemon-summary dl dd {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 34%;
+          flex: 0 1 34%;
+}
+
+.pokemon-summary dl dt {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
-  margin: 0;
+      -ms-flex: 1 0 34%;
+          flex: 1 0 34%;
 }
 
 .pokemon-summary ul {

@@ -18,7 +18,7 @@ html
 
 body
 {
-	max-width: 1200px;
+	max-width: 1000px;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -91,5 +91,19 @@ h1
 	.material-icons
 	{
 		font-size: 4em;
+	}
+}
+
+.warning {
+	flex-wrap: nowrap;
+	flex: 1 1 auto;
+	border: 3px solid #ff2929;
+	background-color: #ff7070;
+	margin: 20px;
+	padding: 10px;
+
+	img
+	{
+		width: 100px;
 	}
 }

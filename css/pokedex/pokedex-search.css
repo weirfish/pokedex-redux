@@ -36,16 +36,4 @@ form.pokedex-search input[name=submit] {
 form.pokedex-search input[name=submit]:hover {
   background-color: #DDD;
 }
-
-.warning {
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  border: 3px solid #ff2929;
-  background-color: #ff7070;
-  margin: 20px;
-  padding: 10px;
-}
 /*# sourceMappingURL=pokedex-search.css.map */

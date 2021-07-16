@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  max-width: 1200px;
+  max-width: 1000px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,5 +92,21 @@ h1 {
 
 #home-button .material-icons {
   font-size: 4em;
+}
+
+.warning {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  border: 3px solid #ff2929;
+  background-color: #ff7070;
+  margin: 20px;
+  padding: 10px;
+}
+
+.warning img {
+  width: 100px;
 }
 /*# sourceMappingURL=default-template.css.map */

@@ -21,6 +21,19 @@ class Page extends \Engine\Page\Page
 
 		$this->addElement
 		(
+			\Engine\Page\Element\Div::create()
+			->setElements
+			([
+				\Engine\Page\Element\Image::create()
+				->setSrc(IconProvider::getWarningIconPath()),
+				\Engine\Page\Element\Paragraph::create()
+				->setText("The data files that drive this website are sparse and incomplete, scraped imperfectly from the Pokedex PDF and the Fancy Sheet. This project is a work in progress. Please be patient, and report issues on <a href=\"https://github.com/weirfish/pokedex-redux/issues\">Github</a>")
+			])
+			->addAttribute(new \Engine\Page\Element\Attribute("class", "warning"))
+		);
+
+		$this->addElement
+		(
 			\PtuDex\Home\Elements\MainMenu::create()
 		);
 	}

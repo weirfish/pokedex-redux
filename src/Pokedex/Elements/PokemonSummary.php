@@ -178,7 +178,7 @@ class PokemonSummary extends \Engine\Page\Element\Div
 					$heading = "<i>Basic</i>";
 					break;
 				case 20:
-					$heading = "<i>Advanced</i>";
+					$heading = "<i>Adv</i>";
 					break;
 				case 40:
 					$heading = "<i>High</i>";
