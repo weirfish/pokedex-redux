@@ -34,7 +34,7 @@ class RuleFactory
 			// 	$rule = PokemonNameRule::create(); break;
 			// case \PtuDex\Pokedex\Service\Search\Terms::CAPABILITY:
 			// 	$rule = PokemonNameRule::create(); break;
-			default: throw new \LogicException("Term not recognised");
+			default: throw new \LogicException("Term \"{$term}\" not recognised. Did you mean \"" . \PtuDex\Pokedex\Service\Search\Terms::getClosestTerm($term, 1) . "\"?");
 		}
 
 		return $rule->setComparator($comparator)

@@ -16,7 +16,7 @@ class Terms extends \Engine\Abstracts\Enum
 	const ABILITY    = "ability";
 	const CAPABILITY = "capability";
 
-	public function isNumericComparison($value)
+	public static function isNumericComparison($value)
 	{
 		if(!self::isConstantValue($value))
 			throw new \LogicException("{$value} is not a valid value");
@@ -31,7 +31,7 @@ class Terms extends \Engine\Abstracts\Enum
 		return false;
 	}
 
-	public function isContainsComparison($value)
+	public static function isContainsComparison($value)
 	{
 		if(!self::isConstantValue($value))
 			throw new \LogicException("{$value} is not a valid value");
@@ -52,7 +52,7 @@ class Terms extends \Engine\Abstracts\Enum
 		return false;
 	}
 
-	public function isSubstringComparison($value)
+	public static function isSubstringComparison($value)
 	{
 		if(!self::isConstantValue($value))
 			throw new \LogicException("{$value} is not a valid value");
@@ -64,5 +64,10 @@ class Terms extends \Engine\Abstracts\Enum
 		}
 
 		return false;
+	}
+
+	public static function getClosestTerm(string $target, int $count)
+	{
+		return \Engine\Util\Strings::getClosestStringsToTarget($target, $count, ...self::getConstants())[0];
 	}
 }

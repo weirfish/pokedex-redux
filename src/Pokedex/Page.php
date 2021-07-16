@@ -10,10 +10,6 @@ class Page extends \Engine\Page\Page
 	protected function addElements()
 	{
 		$poke_factory = \PtuDex\Common\Factories\PokemonFactory::getInstance();
-		$rules        = \PtuDex\Pokedex\Service\Search\SearchStringInterpreter::create()
-		->setSearchString($this->get['search'] ?? "")
-		->run()
-		->getRules();
 
 		$this->addElement
 		(
@@ -22,19 +18,50 @@ class Page extends \Engine\Page\Page
 			->setContents("Pokedex")
 		);
 
+		try
+		{
+			$rules        = \PtuDex\Pokedex\Service\Search\SearchStringInterpreter::create()
+			->setSearchString($this->get['search'] ?? "")
+			->run()
+			->getRules();
+
+			// @TODO Make criteria for factories
+			$pokemon = \PtuDex\Pokedex\Service\Filters\Filter::create()
+			->setRules($rules)
+			->setModels($poke_factory->getAllPokemon())
+			->filter();
+		}
+		catch(\Exception $e)
+		{
+			$this->get['search'] == "";
+
+			$exceptionMessage = $e->getMessage();
+
+			$pokemon = $poke_factory->getAllPokemon();
+		}
+
+		$paginationCount = count($pokemon);
+
 		$this->addElement
 		(
 			\PtuDex\Pokedex\Elements\PokedexSearch::create()
 			->setSearchString($this->get['search'] ?? "")
 		);
 
-		// @TODO Make criteria for factories
-		$pokemon = \PtuDex\Pokedex\Service\Filters\Filter::create()
-		->setRules($rules)
-		->setModels($poke_factory->getAllPokemon())
-		->filter();
+		if(isset($exceptionMessage))
+		{
+			$this->addElement
+			(
+				\Engine\Page\Element\Div::create()
+				->addElement
+				(
+					\Engine\Page\Element\Literal::create()
+					->setContents("There was a problem with your request: {$exceptionMessage}")
+				)
+				->addAttribute(new \Engine\Page\Element\Attribute("class", "warning"))
+			);
 
-		$paginationCount = count($pokemon);
+		}
 
 		$currentPage = \Engine\Routing\Url::currentPage()->getQueryValue("page") ?? 1;
 		$currentPage--;
