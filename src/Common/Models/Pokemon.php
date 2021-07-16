@@ -75,4 +75,71 @@ class Pokemon extends Entity
 	{
 		return $this->abilities->hasHighAbility($ability);
 	}
+
+	public function getAllLearnMovesToEvo() : array
+	{
+		$moves = [];
+
+		$moves = [...$moves, ...$this->learnMoves->getMoves()];
+
+		if($this->evolution?->getPreviousEvo($this) !== null)
+		{
+			$moves = [...$moves, ...$this->evolution->getPreviousEvo($this)->getAllLearnMovesToEvo()];
+		}
+
+		return $moves;
+	}
+
+	public function getAllEggMovesToEvo() : array
+	{
+		$moves = [];
+
+		$moves = [...$moves, ...$this->eggMoves->getMoves()];
+
+		if($this->evolution?->getPreviousEvo($this) !== null)
+		{
+			$moves = [...$moves, ...$this->evolution->getPreviousEvo($this)->getAllEggMovesToEvo()];
+		}
+
+		return $moves;
+	}
+
+	public function getAllHmtmMovesToEvo() : array
+	{
+		$moves = [];
+
+		$moves = [...$moves, ...$this->hmtmMoves->getMoves()];
+
+		if($this->evolution?->getPreviousEvo($this) !== null)
+		{
+			$moves = [...$moves, ...$this->evolution->getPreviousEvo($this)->getAllHmtmMovesToEvo()];
+		}
+
+		return $moves;
+	}
+
+	public function getAllTutorMovesToEvo() : array
+	{
+		$moves = [];
+
+		$moves = [...$moves, ...$this->tutorMoves->getMoves()];
+
+		if($this->evolution?->getPreviousEvo($this) !== null)
+		{
+			$moves = [...$moves, ...$this->evolution->getPreviousEvo($this)->getAllTutorMovesToEvo()];
+		}
+
+		return $moves;
+	}
+
+	public function getAllMovesToEvo() : array
+	{
+		return
+		[
+			...$this->getAllLearnMovesToEvo(),
+			...$this->getAllEggMovesToEvo(),
+			...$this->getAllHmtmMovesToEvo(),
+			...$this->getAllTutorMovesToEvo(),
+		];
+	}
 }

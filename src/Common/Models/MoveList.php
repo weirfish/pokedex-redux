@@ -14,6 +14,19 @@ class MoveList extends EntityList
 		return $this->hasEntity($move);
 	}
 
+	public function getMoves()
+	{
+		$moves = [];
+
+		/** @var EntityListEntry $entry */
+		foreach($this->entityListEntries as $entry)
+		{
+			$moves[] = $entry->entity;
+		}
+
+		return $moves;
+	}
+
 	public function getMoveListEntryByName(string $name) : MoveListEntry
 	{
 		return $this->getEntityListEntryByProperty($name, "name");

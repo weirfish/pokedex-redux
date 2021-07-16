@@ -11,6 +11,62 @@ class PokemonFactory extends JsonDrivenFactory
 		return \Engine\Util\Paths::getDataPath() . "pokemon.json";
 	}
 
+	protected function postDefintion() : void
+	{
+		$data = $this->getData();
+
+		foreach($data as $datum)
+		{
+			$pokemon = $this->getPokemonByName($datum['name']);
+			$pokemonLevel = 0;
+
+			if($pokemon === null)
+				continue;
+
+			$previousPokemon = null;
+			$nextPokemon     = null;
+
+			$previousName = $datum['previous_evo']['name'] ?? null;
+
+			if($previousName !== null)
+			{
+				$previousPokemon = new \PtuDex\Common\Models\EvolutionChainEntry
+				(
+					$this->getPokemonByName($previousName),
+					$datum['previous_evo']['level']
+				);
+
+				$pokemonLevel += $datum['previous_evo']['level'];
+			}
+			else $pokemonLevel += 0;
+
+			$nextName = $datum['next_evo']['name'] ?? null;
+
+			if($nextName !== null)
+			{
+				$nextPokemon = new \PtuDex\Common\Models\EvolutionChainEntry
+				(
+					$this->getPokemonByName($nextName),
+					$datum['next_evo']['level']
+				);
+
+				$pokemonLevel += $datum['next_evo']['level'];
+			}
+			else $pokemonLevel += 50;
+
+			$pokemon->evolution = new \PtuDex\Common\Models\EvolutionChain
+			(array_filter([
+				$previousPokemon,
+				new \PtuDex\Common\Models\EvolutionChainEntry
+				(
+					$pokemon,
+					$pokemonLevel / 2
+				),
+				$nextPokemon
+			]));
+		}
+	}
+
 	protected function makeModel(array $data): \Engine\Model\Model
 	{
 		$model = new \PtuDex\Common\Models\Pokemon($data['name'], "");

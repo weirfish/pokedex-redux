@@ -4,9 +4,9 @@ namespace PtuDex\Common\Models;
 
 class EvolutionChain extends EntityList
 {
-	public function __construct($evolution_chain_entry)
+	public function __construct(...$evolution_chain_entry)
 	{
-		parent::__construct(Pokemon::class, $evolution_chain_entry);
+		parent::__construct(Pokemon::class, ...$evolution_chain_entry);
 	}
 
 	public function hasPokemon(Pokemon $pokemon) : bool
@@ -22,7 +22,7 @@ class EvolutionChain extends EntityList
 		foreach($this->entityListEntries as $key => $pokemon)
 		{
 			if($pokemon->entity->name === $rootPokemon->name && $key >= 1)
-				return $this->entityListEntries[$key - 1];
+				return $this?->entityListEntries[$key - 1]?->entity ?? null;
 		}
 
 		return null;

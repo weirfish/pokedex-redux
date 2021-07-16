@@ -48,4 +48,9 @@ class Move extends Entity
 			"effect" => $this->effect,
 		];
 	}
+
+	public function __debugInfo()
+	{
+		return $this->toArray();
+	}
 }

@@ -4,21 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "62ee1e5898c3f29e05cc2ed98ff84e78",
+    "content-hash": "c62a659a278ad6acac00d8c577a9f683",
     "packages": [
         {
             "name": "weirweb/engine",
             "version": "1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/weirfish/engine.git",
-                "reference": "243f87696aae5bf8506f497dec1c4ef99be7202d"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/weirfish/engine/zipball/243f87696aae5bf8506f497dec1c4ef99be7202d",
-                "reference": "243f87696aae5bf8506f497dec1c4ef99be7202d",
-                "shasum": ""
+                "type": "path",
+                "url": "../engine",
+                "reference": "32980e5a6693f43c6613bdcd813bc29f44601658"
             },
             "require-dev": {
                 "phpstan/phpstan": "^0.12.81",
@@ -37,25 +31,17 @@
                 }
             ],
             "description": "Weirweb Engine",
-            "support": {
-                "source": "https://github.com/weirfish/engine/tree/1.0.0",
-                "issues": "https://github.com/weirfish/engine/issues"
-            },
-            "time": "2021-07-13T22:21:38+00:00"
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "weirweb/engine-comparator",
             "version": "1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/weirfish/engine-comparator.git",
-                "reference": "a4649c4cdaabe81a51b1f875eab38fa46084fe27"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/weirfish/engine-comparator/zipball/a4649c4cdaabe81a51b1f875eab38fa46084fe27",
-                "reference": "a4649c4cdaabe81a51b1f875eab38fa46084fe27",
-                "shasum": ""
+                "type": "path",
+                "url": "../engine-comparator",
+                "reference": "a4649c4cdaabe81a51b1f875eab38fa46084fe27"
             },
             "require": {
                 "weirweb/engine": "@dev"
@@ -78,25 +64,50 @@
                 }
             ],
             "description": "Weirweb Engine - A Comparator Module",
-            "support": {
-                "source": "https://github.com/weirfish/engine-comparator/tree/1.0.0",
-                "issues": "https://github.com/weirfish/engine-comparator/issues"
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "weirweb/engine-database",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "../engine-database",
+                "reference": "a9ecd365f2370297096a978ce9ef9d383913e2ee"
             },
-            "time": "2021-07-13T22:25:56+00:00"
+            "require": {
+                "weirweb/engine": "@dev"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.12.81",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "Engine\\Database\\": "src",
+                    "Engine\\Database\\Test\\": "test"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Thomas Pearce",
+                    "email": "github@tpearce.net"
+                }
+            ],
+            "description": "Weirweb Engine - Database modeul",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "weirweb/engine-dice",
             "version": "1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/weirfish/engine-dice.git",
-                "reference": "47ea99a2fa15abddcb8bbaeb8055128faa5e3539"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/weirfish/engine-dice/zipball/47ea99a2fa15abddcb8bbaeb8055128faa5e3539",
-                "reference": "47ea99a2fa15abddcb8bbaeb8055128faa5e3539",
-                "shasum": ""
+                "type": "path",
+                "url": "../engine-dice",
+                "reference": "47ea99a2fa15abddcb8bbaeb8055128faa5e3539"
             },
             "require": {
                 "weirweb/engine": "@dev"
@@ -119,25 +130,17 @@
                 }
             ],
             "description": "Weirweb Engine - Dice Module",
-            "support": {
-                "source": "https://github.com/weirfish/engine-dice/tree/1.0.0",
-                "issues": "https://github.com/weirfish/engine-dice/issues"
-            },
-            "time": "2021-07-13T22:24:26+00:00"
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "weirweb/engine-model",
             "version": "1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/weirfish/engine-model.git",
-                "reference": "a9f9a9f42858b76ac89f28524d12d417be84b660"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/weirfish/engine-model/zipball/a9f9a9f42858b76ac89f28524d12d417be84b660",
-                "reference": "a9f9a9f42858b76ac89f28524d12d417be84b660",
-                "shasum": ""
+                "type": "path",
+                "url": "../engine-model",
+                "reference": "a9f9a9f42858b76ac89f28524d12d417be84b660"
             },
             "require": {
                 "weirweb/engine": "@dev"
@@ -160,25 +163,17 @@
                 }
             ],
             "description": "Weirweb Engine - Model Module",
-            "support": {
-                "source": "https://github.com/weirfish/engine-model/tree/1.0.0",
-                "issues": "https://github.com/weirfish/engine-model/issues"
-            },
-            "time": "2021-07-13T22:25:19+00:00"
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "weirweb/engine-page",
             "version": "1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/weirfish/engine-page.git",
-                "reference": "a58f5d4c3d41fdf0d6ba61d40fea58b8aa542094"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/weirfish/engine-page/zipball/a58f5d4c3d41fdf0d6ba61d40fea58b8aa542094",
-                "reference": "a58f5d4c3d41fdf0d6ba61d40fea58b8aa542094",
-                "shasum": ""
+                "type": "path",
+                "url": "../engine-page",
+                "reference": "9f127c6c891e9b4e2d474dc81581e04693658d1e"
             },
             "require": {
                 "weirweb/engine": "@dev",
@@ -195,25 +190,17 @@
                 }
             },
             "description": "Weirweb Engine - Page Module",
-            "support": {
-                "source": "https://github.com/weirfish/engine-page/tree/1.0.0",
-                "issues": "https://github.com/weirfish/engine-page/issues"
-            },
-            "time": "2021-07-13T22:23:53+00:00"
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "weirweb/engine-routing",
             "version": "1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/weirfish/engine-routing.git",
-                "reference": "33335f8714730327d34222d97abc3ede2321d4c3"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/weirfish/engine-routing/zipball/33335f8714730327d34222d97abc3ede2321d4c3",
-                "reference": "33335f8714730327d34222d97abc3ede2321d4c3",
-                "shasum": ""
+                "type": "path",
+                "url": "../engine-routing",
+                "reference": "33335f8714730327d34222d97abc3ede2321d4c3"
             },
             "require": {
                 "weirweb/engine": "@dev",
@@ -230,11 +217,9 @@
                 }
             },
             "description": "Weirweb Engine - Routing Module",
-            "support": {
-                "source": "https://github.com/weirfish/engine-routing/tree/1.0.0",
-                "issues": "https://github.com/weirfish/engine-routing/issues"
-            },
-            "time": "2021-07-13T22:22:50+00:00"
+            "transport-options": {
+                "relative": true
+            }
         }
     ],
     "packages-dev": [
@@ -2396,7 +2381,15 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "weirweb/engine": 20,
+        "weirweb/engine-comparator": 20,
+        "weirweb/engine-database": 20,
+        "weirweb/engine-dice": 20,
+        "weirweb/engine-model": 20,
+        "weirweb/engine-page": 20,
+        "weirweb/engine-routing": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

@@ -88,6 +88,12 @@ class CoverageCalculator
 		{
 			$effectivenessImprovements = 0;
 
+			foreach($movelist as $move)
+			{
+				if($move->type === $attackingType)
+					continue 2;
+			}
+
 			/** @var PokemonType $defendingType */
 			foreach($typeFactory->getAllTypes() as $defendingType)
 			{

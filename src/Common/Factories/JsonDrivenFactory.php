@@ -14,11 +14,18 @@ abstract class JsonDrivenFactory extends \Engine\Abstracts\Factory
 		{
 			$this->objects[$object->getName()] = $object;
 		}
+
+		$this->postDefintion();
+	}
+
+	protected function getData() 
+	{
+		return json_decode(file_get_contents($this->getPath()), true);
 	}
 
 	protected function defineObjects() : array
 	{
-		$data = json_decode(file_get_contents($this->getPath()), true);
+		$data = $this->getData();
 
 		$models = [];
 
