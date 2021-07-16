@@ -43,6 +43,9 @@ class CoverageCalculator
 
 		foreach($movelist as $move)
 		{
+			if($move->damage === \PtuDex\Common\Enums\DamageBase::DB0)
+				continue;
+
 			$this->hasResults = true;
 
 			$moveType = $move->type;
