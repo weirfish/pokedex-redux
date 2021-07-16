@@ -17,13 +17,41 @@ class ResultsElement extends \Engine\Page\Element\Div
 			->setIsHeader()
 		);
 
-		foreach($this->results as $type => $score)
+		foreach($this->results->getScores() as $type => $score)
 		{
 			$table->addElement
 			(
 				\Engine\Page\Element\TableRow::create()
 				->setData([ucwords($type), Score::create()->setScore($score)])
 			);
+		}
+
+		if(count($this->results->bestImprovements) > 0)
+		{
+			$table->addElement
+			(
+				\Engine\Page\Element\TableRow::create()
+				->setIsHeader()
+				->setData(["Best improvements"])
+				->addAttribute(new \Engine\Page\Element\Attribute("class", "improvement"))
+			);
+
+			foreach($this->results->bestImprovements as $type)
+			{
+				$table->addElement
+				(
+					\Engine\Page\Element\TableRow::create()
+					->setData
+					([
+						\PtuDex\Common\Elements\PokemonTypeSetDecorator::create()
+						->setValue
+						(
+							new \PtuDex\Common\Models\PokemonTypeSet($type)
+						)
+					])
+					->addAttribute(new \Engine\Page\Element\Attribute("class", "improvement"))
+				);
+			}
 		}
 
 		$this->addElement

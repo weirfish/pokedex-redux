@@ -4,15 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fc226c376efe073cea930e905bcfd0fc",
+    "content-hash": "62ee1e5898c3f29e05cc2ed98ff84e78",
     "packages": [
         {
             "name": "weirweb/engine",
-            "version": "0.1",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/weirfish/engine.git",
+                "reference": "243f87696aae5bf8506f497dec1c4ef99be7202d"
+            },
             "dist": {
-                "type": "path",
-                "url": "../engine",
-                "reference": "2f0ba65e121b58ee8edda5a3ff83212f10c0318a"
+                "type": "zip",
+                "url": "https://api.github.com/repos/weirfish/engine/zipball/243f87696aae5bf8506f497dec1c4ef99be7202d",
+                "reference": "243f87696aae5bf8506f497dec1c4ef99be7202d",
+                "shasum": ""
             },
             "require-dev": {
                 "phpstan/phpstan": "^0.12.81",
@@ -31,17 +37,25 @@
                 }
             ],
             "description": "Weirweb Engine",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/weirfish/engine/tree/1.0.0",
+                "issues": "https://github.com/weirfish/engine/issues"
+            },
+            "time": "2021-07-13T22:21:38+00:00"
         },
         {
             "name": "weirweb/engine-comparator",
-            "version": "0.1",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/weirfish/engine-comparator.git",
+                "reference": "a4649c4cdaabe81a51b1f875eab38fa46084fe27"
+            },
             "dist": {
-                "type": "path",
-                "url": "../engine-comparator",
-                "reference": "f712bcd81d68bbd70fda58beb433a2897ee46ee3"
+                "type": "zip",
+                "url": "https://api.github.com/repos/weirfish/engine-comparator/zipball/a4649c4cdaabe81a51b1f875eab38fa46084fe27",
+                "reference": "a4649c4cdaabe81a51b1f875eab38fa46084fe27",
+                "shasum": ""
             },
             "require": {
                 "weirweb/engine": "@dev"
@@ -64,50 +78,25 @@
                 }
             ],
             "description": "Weirweb Engine - A Comparator Module",
-            "transport-options": {
-                "relative": true
-            }
-        },
-        {
-            "name": "weirweb/engine-database",
-            "version": "0.1",
-            "dist": {
-                "type": "path",
-                "url": "../engine-database",
-                "reference": "bed3234751eb0a64092da669528e10ed84b93aac"
+            "support": {
+                "source": "https://github.com/weirfish/engine-comparator/tree/1.0.0",
+                "issues": "https://github.com/weirfish/engine-comparator/issues"
             },
-            "require": {
-                "weirweb/engine": "@dev"
-            },
-            "require-dev": {
-                "phpstan/phpstan": "^0.12.81",
-                "phpunit/phpunit": "^9.5"
-            },
-            "type": "package",
-            "autoload": {
-                "psr-4": {
-                    "Engine\\Database\\": "src",
-                    "Engine\\Database\\Test\\": "test"
-                }
-            },
-            "authors": [
-                {
-                    "name": "Thomas Pearce",
-                    "email": "github@tpearce.net"
-                }
-            ],
-            "description": "Weirweb Engine - Database modeul",
-            "transport-options": {
-                "relative": true
-            }
+            "time": "2021-07-13T22:25:56+00:00"
         },
         {
             "name": "weirweb/engine-dice",
-            "version": "0.1",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/weirfish/engine-dice.git",
+                "reference": "47ea99a2fa15abddcb8bbaeb8055128faa5e3539"
+            },
             "dist": {
-                "type": "path",
-                "url": "../engine-dice",
-                "reference": "27f7173310091982d174d565bb5e3d181d90b4d4"
+                "type": "zip",
+                "url": "https://api.github.com/repos/weirfish/engine-dice/zipball/47ea99a2fa15abddcb8bbaeb8055128faa5e3539",
+                "reference": "47ea99a2fa15abddcb8bbaeb8055128faa5e3539",
+                "shasum": ""
             },
             "require": {
                 "weirweb/engine": "@dev"
@@ -130,17 +119,25 @@
                 }
             ],
             "description": "Weirweb Engine - Dice Module",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/weirfish/engine-dice/tree/1.0.0",
+                "issues": "https://github.com/weirfish/engine-dice/issues"
+            },
+            "time": "2021-07-13T22:24:26+00:00"
         },
         {
             "name": "weirweb/engine-model",
-            "version": "0.1",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/weirfish/engine-model.git",
+                "reference": "a9f9a9f42858b76ac89f28524d12d417be84b660"
+            },
             "dist": {
-                "type": "path",
-                "url": "../engine-model",
-                "reference": "42fcad1be1f25626f626f333e6d74c81595e1050"
+                "type": "zip",
+                "url": "https://api.github.com/repos/weirfish/engine-model/zipball/a9f9a9f42858b76ac89f28524d12d417be84b660",
+                "reference": "a9f9a9f42858b76ac89f28524d12d417be84b660",
+                "shasum": ""
             },
             "require": {
                 "weirweb/engine": "@dev"
@@ -163,17 +160,25 @@
                 }
             ],
             "description": "Weirweb Engine - Model Module",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/weirfish/engine-model/tree/1.0.0",
+                "issues": "https://github.com/weirfish/engine-model/issues"
+            },
+            "time": "2021-07-13T22:25:19+00:00"
         },
         {
             "name": "weirweb/engine-page",
-            "version": "0.1",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/weirfish/engine-page.git",
+                "reference": "a58f5d4c3d41fdf0d6ba61d40fea58b8aa542094"
+            },
             "dist": {
-                "type": "path",
-                "url": "../engine-page",
-                "reference": "cfd47a650d230c6b468dede686c4cdbf29b4d3a6"
+                "type": "zip",
+                "url": "https://api.github.com/repos/weirfish/engine-page/zipball/a58f5d4c3d41fdf0d6ba61d40fea58b8aa542094",
+                "reference": "a58f5d4c3d41fdf0d6ba61d40fea58b8aa542094",
+                "shasum": ""
             },
             "require": {
                 "weirweb/engine": "@dev",
@@ -190,17 +195,25 @@
                 }
             },
             "description": "Weirweb Engine - Page Module",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/weirfish/engine-page/tree/1.0.0",
+                "issues": "https://github.com/weirfish/engine-page/issues"
+            },
+            "time": "2021-07-13T22:23:53+00:00"
         },
         {
             "name": "weirweb/engine-routing",
-            "version": "0.1",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/weirfish/engine-routing.git",
+                "reference": "33335f8714730327d34222d97abc3ede2321d4c3"
+            },
             "dist": {
-                "type": "path",
-                "url": "../engine-routing",
-                "reference": "f483060f65d5f468fe812c68cb29008305a9f5dc"
+                "type": "zip",
+                "url": "https://api.github.com/repos/weirfish/engine-routing/zipball/33335f8714730327d34222d97abc3ede2321d4c3",
+                "reference": "33335f8714730327d34222d97abc3ede2321d4c3",
+                "shasum": ""
             },
             "require": {
                 "weirweb/engine": "@dev",
@@ -217,9 +230,11 @@
                 }
             },
             "description": "Weirweb Engine - Routing Module",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/weirfish/engine-routing/tree/1.0.0",
+                "issues": "https://github.com/weirfish/engine-routing/issues"
+            },
+            "time": "2021-07-13T22:22:50+00:00"
         }
     ],
     "packages-dev": [
@@ -352,16 +367,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.10.5",
+            "version": "v4.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "4432ba399e47c66624bc73c8c0f811e5c109576f"
+                "reference": "fe14cf3672a149364fb66dfe11bf6549af899f94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/4432ba399e47c66624bc73c8c0f811e5c109576f",
-                "reference": "4432ba399e47c66624bc73c8c0f811e5c109576f",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/fe14cf3672a149364fb66dfe11bf6549af899f94",
+                "reference": "fe14cf3672a149364fb66dfe11bf6549af899f94",
                 "shasum": ""
             },
             "require": {
@@ -402,9 +417,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v4.10.5"
+                "source": "https://github.com/nikic/PHP-Parser/tree/v4.11.0"
             },
-            "time": "2021-05-03T19:11:20+00:00"
+            "time": "2021-07-03T13:36:55+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -744,16 +759,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "0.12.89",
+            "version": "0.12.92",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "54c0f5a6c30511b77128d58b6369f718df250542"
+                "reference": "64d4c5dc8ea96972bc18432d137a330239a5d2b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/54c0f5a6c30511b77128d58b6369f718df250542",
-                "reference": "54c0f5a6c30511b77128d58b6369f718df250542",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/64d4c5dc8ea96972bc18432d137a330239a5d2b2",
+                "reference": "64d4c5dc8ea96972bc18432d137a330239a5d2b2",
                 "shasum": ""
             },
             "require": {
@@ -784,7 +799,7 @@
             "description": "PHPStan - PHP Static Analysis Tool",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan/issues",
-                "source": "https://github.com/phpstan/phpstan/tree/0.12.89"
+                "source": "https://github.com/phpstan/phpstan/tree/0.12.92"
             },
             "funding": [
                 {
@@ -804,7 +819,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-06-09T20:23:49+00:00"
+            "time": "2021-07-10T13:53:49+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -1126,16 +1141,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.5.5",
+            "version": "9.5.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "89ff45ea9d70e35522fb6654a2ebc221158de276"
+                "reference": "fb9b8333f14e3dce976a60ef6a7e05c7c7ed8bfb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/89ff45ea9d70e35522fb6654a2ebc221158de276",
-                "reference": "89ff45ea9d70e35522fb6654a2ebc221158de276",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/fb9b8333f14e3dce976a60ef6a7e05c7c7ed8bfb",
+                "reference": "fb9b8333f14e3dce976a60ef6a7e05c7c7ed8bfb",
                 "shasum": ""
             },
             "require": {
@@ -1165,7 +1180,7 @@
                 "sebastian/global-state": "^5.0.1",
                 "sebastian/object-enumerator": "^4.0.3",
                 "sebastian/resource-operations": "^3.0.3",
-                "sebastian/type": "^2.3.2",
+                "sebastian/type": "^2.3.4",
                 "sebastian/version": "^3.0.2"
             },
             "require-dev": {
@@ -1213,7 +1228,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.5"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.6"
             },
             "funding": [
                 {
@@ -1225,7 +1240,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-06-05T04:49:07+00:00"
+            "time": "2021-06-23T05:14:38+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -2084,16 +2099,16 @@
         },
         {
             "name": "sebastian/type",
-            "version": "2.3.2",
+            "version": "2.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/type.git",
-                "reference": "0d1c587401514d17e8f9258a27e23527cb1b06c1"
+                "reference": "b8cd8a1c753c90bc1a0f5372170e3e489136f914"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/type/zipball/0d1c587401514d17e8f9258a27e23527cb1b06c1",
-                "reference": "0d1c587401514d17e8f9258a27e23527cb1b06c1",
+                "url": "https://api.github.com/repos/sebastianbergmann/type/zipball/b8cd8a1c753c90bc1a0f5372170e3e489136f914",
+                "reference": "b8cd8a1c753c90bc1a0f5372170e3e489136f914",
                 "shasum": ""
             },
             "require": {
@@ -2128,7 +2143,7 @@
             "homepage": "https://github.com/sebastianbergmann/type",
             "support": {
                 "issues": "https://github.com/sebastianbergmann/type/issues",
-                "source": "https://github.com/sebastianbergmann/type/tree/2.3.2"
+                "source": "https://github.com/sebastianbergmann/type/tree/2.3.4"
             },
             "funding": [
                 {
@@ -2136,7 +2151,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-06-04T13:02:07+00:00"
+            "time": "2021-06-15T12:49:02+00:00"
         },
         {
             "name": "sebastian/version",
@@ -2381,15 +2396,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "weirweb/engine": 20,
-        "weirweb/engine-comparator": 20,
-        "weirweb/engine-database": 20,
-        "weirweb/engine-dice": 20,
-        "weirweb/engine-model": 20,
-        "weirweb/engine-page": 20,
-        "weirweb/engine-routing": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

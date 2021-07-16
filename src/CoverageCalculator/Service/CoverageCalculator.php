@@ -5,6 +5,8 @@ namespace PtuDex\CoverageCalculator\Service;
 use PtuDex\Common\Models\Move;
 use \PtuDex\Common\Models\PokemonType;
 use \PtuDex\Common\Models\MoveFrequency;
+use \PtuDex\CoverageCalculator\Model\CoverageCalculatorScores;
+use \PtuDex\CoverageCalculator\Model\CoverageCalculatorScore;
 
 class CoverageCalculator
 {
@@ -18,80 +20,114 @@ class CoverageCalculator
 
 	public function run() : self
 	{
-		$typeFactory = \PtuDex\Common\Factories\TypeFactory::getInstance();
-		$scores = [];
+		$this->results = [];
 
 		foreach($this->moves as $movelist)
 		{
-			$score = \PtuDex\CoverageCalculator\Model\CoverageCalculatorScores::create();
+			$scores = $this->getScores($movelist);
 
-			foreach($movelist as $move)
-			{
-				if($move->damage === \PtuDex\Common\Enums\DamageBase::DB0)
-					continue;
+			if(count($movelist) > 0 && count($movelist) < 6)
+				$scores = $this->getBestAddition($scores, $movelist);
 
-				$this->hasResults = true;
-
-				$moveType = $move->type;
-
-				foreach(\PtuDex\Common\Enums\TypeNames::getConstants() as $key => $value)
-				{
-					$activeType = $typeFactory->getType($value);
-
-					$moveScore = $this->getScore($activeType, $moveType, $move->frequency);
-
-					$new_score = min($score->$value ?? PHP_INT_MAX, $moveScore, 10);
-
-					$score->$value = $new_score;
-				}
-			}
-
-			$scores[] = $score;
+			$this->results[] = $scores;
 		}
 
-		$this->results = $scores;
-
 		return $this;
+	}
+
+	/** @param Move[] $movelist */
+	private function getScores(array $movelist) : CoverageCalculatorScores
+	{
+		$scores      = CoverageCalculatorScores::create();
+		$typeFactory = \PtuDex\Common\Factories\TypeFactory::getInstance();
+
+		foreach($movelist as $move)
+		{
+			$this->hasResults = true;
+
+			$moveType = $move->type;
+
+			/** @var PokemonType $type */
+			foreach($typeFactory->getAllTypes() as $type)
+			{
+				$new_score      = $this->getScore($type, $moveType, $move->frequency);
+				$existing_score = $scores->getScore($type->getName());
+
+				// If this move gives better effectiveness, overwrite
+				if($new_score->effectiveness < $existing_score->effectiveness)
+					$scores->setScore($type->getName(), $new_score);
+
+				// If it has the same effectiveness and they're both EOT, consider it at-will
+				if
+				(
+					$new_score->effectiveness == $existing_score->effectiveness &&
+					$new_score->frequency == CoverageCalculatorScore::EOT &&
+					$existing_score->frequency == CoverageCalculatorScore::EOT
+				)
+				{
+					$new_score->frequency = CoverageCalculatorScore::ATWILL;
+
+					$scores->setScore($type->getName(), $new_score);
+				}
+			}
+		}
+
+		return $scores;
+	}
+
+	/** @param Move[] $movelist */
+	private function getBestAddition(CoverageCalculatorScores $scores, array $movelist) : CoverageCalculatorScores
+	{
+		$typeFactory = \PtuDex\Common\Factories\TypeFactory::getInstance();
+
+		$bestType    = [];
+		$improvement = 0;
+
+		/** @var PokemonType $attackingType */
+		foreach($typeFactory->getAllTypes() as $attackingType)
+		{
+			$effectivenessImprovements = 0;
+
+			/** @var PokemonType $defendingType */
+			foreach($typeFactory->getAllTypes() as $defendingType)
+			{
+				$score = $this->getScore($defendingType, $attackingType, new MoveFrequency(\PtuDex\Common\Enums\MoveFrequencyTypes::AT_WILL));
+
+				$effectivenessImprovements += max(0, $score->effectiveness - $scores->getScore($defendingType->getName())->effectiveness);
+			}
+			
+			if($improvement < $effectivenessImprovements)
+			{
+				$bestType = [$attackingType];
+				$improvement = $effectivenessImprovements;
+			}
+			else if($improvement == $effectivenessImprovements)
+				$bestType[] = $attackingType;
+		}
+		
+		if(null !== $bestType)
+			$scores->bestImprovements = $bestType;
+
+		return $scores;
 	}
 
 	private function getScore(PokemonType $activeType, PokemonType $moveType, MoveFrequency $frequency)
 	{
 		if($activeType->isWeakTo($moveType))
-			$effectiveness_score = 1;
+			$effectiveness_score = CoverageCalculatorScore::SUPER;
 		else if($activeType->isResistantTo($moveType))
-			$effectiveness_score = 4;
+			$effectiveness_score = CoverageCalculatorScore::RESISTED;
 		else if($activeType->isImmuneTo($moveType))
-			$effectiveness_score = 8;
-		else $effectiveness_score = 2;
+			$effectiveness_score = CoverageCalculatorScore::IMMUNE;
+		else $effectiveness_score = CoverageCalculatorScore::NEUTRAL;
 
 		if($frequency->type === \PtuDex\Common\Enums\MoveFrequencyTypes::AT_WILL)
-			$frequency_score = 16;
+			$frequency_score = CoverageCalculatorScore::ATWILL;
 		else if($frequency->type === \PtuDex\Common\Enums\MoveFrequencyTypes::EOT)
-			$frequency_score = 32;
-		else $frequency_score = 64;
+			$frequency_score = CoverageCalculatorScore::EOT;
+		else $frequency_score = CoverageCalculatorScore::SOMETIMES;
 
-		switch($effectiveness_score | $frequency_score)
-		{
-			case 1 | 16:
-				return \PtuDex\CoverageCalculator\Model\CoverageCalculatorScores::SUPER_EVERY;
-			case 1 | 32:
-				return \PtuDex\CoverageCalculator\Model\CoverageCalculatorScores::SUPER_EOT;
-			case 1 | 64:
-				return \PtuDex\CoverageCalculator\Model\CoverageCalculatorScores::SUPER_SOMETIMES;
-			case 2 | 16:
-				return \PtuDex\CoverageCalculator\Model\CoverageCalculatorScores::NORMAL_EVERY;
-			case 2 | 32:
-				return \PtuDex\CoverageCalculator\Model\CoverageCalculatorScores::NORMAL_EOT;
-			case 2 | 64:
-				return \PtuDex\CoverageCalculator\Model\CoverageCalculatorScores::NORMAL_SOMETIMES;
-			case 4 | 16:
-				return \PtuDex\CoverageCalculator\Model\CoverageCalculatorScores::RESISTED_EVERY;
-			case 4 | 32:
-				return \PtuDex\CoverageCalculator\Model\CoverageCalculatorScores::RESISTED_EOT;
-			case 4 | 64:
-				return \PtuDex\CoverageCalculator\Model\CoverageCalculatorScores::RESISTED_SOMETIMES;
-			default: return \PtuDex\CoverageCalculator\Model\CoverageCalculatorScores::IMMUNE;
-		}
+		return new CoverageCalculatorScore($frequency_score, $effectiveness_score);
 	}
 
 	public function hasResults() : bool

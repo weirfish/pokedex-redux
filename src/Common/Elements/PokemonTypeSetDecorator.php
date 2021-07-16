@@ -25,7 +25,7 @@ class PokemonTypeSetDecorator extends \Engine\Page\Element\Decorator
 				(new \Engine\Page\Element\Literal)
 				->setContents($type->getHumanReadableName())
 			)
-			->addAttribute(new \Engine\Page\Element\Attribute("class", "{$type_name}"));
+			->addAttribute(new \Engine\Page\Element\Attribute("class", "type-{$type_name}"));
 		}
 
 		$this->setElements($elements);

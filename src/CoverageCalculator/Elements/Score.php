@@ -4,41 +4,49 @@ namespace PtuDex\CoverageCalculator\Elements;
 
 class Score extends \Engine\Page\Element\Literal
 {
-	private float $score;
+	private \PtuDex\CoverageCalculator\Model\CoverageCalculatorScore $score;
 
-	private string $immune      = "❌";
-	private string $resisted    = "😧";
-	private string $normal      = "😑";
-	private string $super       = "😀";
-	private string $superAlways = "🔥";
+	private string $immune   = "⛔";
+	private string $resisted = "⚠️";
+	private string $normal   = "🟢";
+	private string $super    = "🔷";
+
+	private string $atWill    = "✔️";
+	private string $eot       = "〰️";
+	private string $sometimes = "❌";
 
 	public function render(): string
 	{
-		switch($this->score)
-		{
-			case \PtuDex\CoverageCalculator\Model\CoverageCalculatorScores::IMMUNE:
-				$this->setContents($this->immune); break;
-			case \PtuDex\CoverageCalculator\Model\CoverageCalculatorScores::RESISTED_EOT:
-			case \PtuDex\CoverageCalculator\Model\CoverageCalculatorScores::RESISTED_EVERY:
-			case \PtuDex\CoverageCalculator\Model\CoverageCalculatorScores::RESISTED_SOMETIMES:
-				$this->setContents($this->resisted); break;
-			case \PtuDex\CoverageCalculator\Model\CoverageCalculatorScores::NORMAL_SOMETIMES:
-			case \PtuDex\CoverageCalculator\Model\CoverageCalculatorScores::NORMAL_EVERY:
-			case \PtuDex\CoverageCalculator\Model\CoverageCalculatorScores::NORMAL_EOT:
-				$this->setContents($this->normal); break;
-			case \PtuDex\CoverageCalculator\Model\CoverageCalculatorScores::SUPER_EOT:
-			case \PtuDex\CoverageCalculator\Model\CoverageCalculatorScores::SUPER_SOMETIMES:
-				$this->setContents($this->super); break;
-			case \PtuDex\CoverageCalculator\Model\CoverageCalculatorScores::SUPER_EVERY:
-				$this->setContents($this->superAlways); break;
+		$contents = [];
 
-			default: $this->setContents($this->score); break;
+		switch($this->score->effectiveness)
+		{
+			case \PtuDex\CoverageCalculator\Model\CoverageCalculatorScore::IMMUNE:
+				$contents[] = $this->immune; break;
+			case \PtuDex\CoverageCalculator\Model\CoverageCalculatorScore::RESISTED:
+				$contents[] = $this->resisted; break;
+			case \PtuDex\CoverageCalculator\Model\CoverageCalculatorScore::NEUTRAL:
+				$contents[] = $this->normal; break;
+			case \PtuDex\CoverageCalculator\Model\CoverageCalculatorScore::SUPER:
+				$contents[] = $this->super; break;
 		}
+
+		switch($this->score->frequency)
+		{
+			case \PtuDex\CoverageCalculator\Model\CoverageCalculatorScore::ATWILL:
+				$contents[] = $this->atWill; break;
+			case \PtuDex\CoverageCalculator\Model\CoverageCalculatorScore::EOT:
+				$contents[] = $this->eot; break;
+			case \PtuDex\CoverageCalculator\Model\CoverageCalculatorScore::SOMETIMES:
+				$contents[] = $this->sometimes; break;
+		}
+
+		$this->setContents(implode(" ", $contents));
 
 		return parent::render();
 	}
 
-	public function setScore(float $score) : self
+	public function setScore(\PtuDex\CoverageCalculator\Model\CoverageCalculatorScore $score) : self
 	{
 		$this->score = $score;
 	

@@ -37,10 +37,12 @@ body > div
 {
 	width: 100%;
 	box-sizing: border-box;
+	align-items: flex-start;
 
-	div
+	& > div
 	{
 		width: 16%;
+
 		table 
 		{
 			flex-basis: 100%;
@@ -59,6 +61,14 @@ body > div
 					&:first-child
 					{
 						justify-content: left;
+					}
+				}
+
+				&.improvement
+				{
+					td, th
+					{
+						justify-content: center;
 					}
 				}
 			}
