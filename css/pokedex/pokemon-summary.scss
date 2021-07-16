@@ -1,6 +1,6 @@
 .pokemon-summary
 {
-	width: 100%;
+	flex-basis: 100%;
 	padding: 10px 0 0 0;
 
 	&>div // Each row
@@ -82,7 +82,6 @@
 			{
 				width: 25%;
 				align-content: flex-start;
-				border-right: 1px solid #888;
 				padding: 10px 0;
 
 				&:last-of-type
@@ -152,6 +151,5 @@
 		justify-content: flex-start;
 		flex: 1 1 auto;
 		padding-left: 2em;
-		text-decoration: underline solid #888;
 	}
 }

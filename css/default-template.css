@@ -90,6 +90,39 @@ h1 {
   left: 0;
 }
 
+#home-button:visited {
+  color: #000;
+}
+
+#home-button:hover {
+  color: #444;
+  background-image: linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red);
+  background-clip: text;
+  color: transparent;
+  -webkit-animation: rainbow_animation 4s linear infinite;
+          animation: rainbow_animation 4s linear infinite;
+  background-size: 1600% 100%;
+  -webkit-text-stroke: linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red);
+}
+
+@-webkit-keyframes rainbow_animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes rainbow_animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
 #home-button .material-icons {
   font-size: 4em;
 }

@@ -9,6 +9,8 @@ $warningBrd: #ff2929;
 $actionBg: #9ee29e;
 $actionBrd: #247424;
 
+$prideGradiant: linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red);
+
 html
 {
 	box-sizing: border-box;
@@ -87,6 +89,32 @@ h1
 	position:absolute;
 	top:0;
 	left:0;
+
+	&:visited
+	{
+		color: #000;
+	}
+
+	&:hover
+	{
+		color: #444;
+		background-image: $prideGradiant;
+		background-clip: text;
+		color: transparent;
+		animation: rainbow_animation 4s linear infinite;
+		background-size: 1600% 100%;
+		-webkit-text-stroke: $prideGradiant;
+		
+		@keyframes rainbow_animation {
+			0% {
+				background-position: 0 0;
+			}
+		
+			100% {
+				background-position: 100% 0;
+			}
+		}
+	}
 
 	.material-icons
 	{
