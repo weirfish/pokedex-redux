@@ -2,7 +2,7 @@
 
 namespace PtuDex\Common\Enums;
 
-class MoveKeywords extends \Engine\Abstracts\Enum
+enum MoveKeywords : string
 {
 	const PREFIX        = "moveKeywords";
 

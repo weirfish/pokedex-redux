@@ -2,7 +2,7 @@
 
 namespace PtuDex\Common\Enums;
 
-class MoveFrequencyTypes extends \Engine\Abstracts\Enum
+enum MoveFrequencyTypes : string
 {
 	const PREFIX    = "moveFrequencyTypes";
 

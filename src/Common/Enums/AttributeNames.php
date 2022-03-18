@@ -2,14 +2,14 @@
 
 namespace PtuDex\Common\Enums;
 
-class AttributeNames extends \Engine\Abstracts\Enum
+enum AttributeNames : string
 {
-	const PREFIX          = "attribute";
+	case PREFIX          = "attribute";
 
-	const HP              = "hp";
-	const ATTACK          = "attack";
-	const DEFENSE         = "defense";
-	const SPECIAL_ATTACK  = "special_attack";
-	const SPECIAL_DEFENSE = "special_defense";
-	const SPEED           = "speed";
+	case HP              = "hp";
+	case ATTACK          = "attack";
+	case DEFENSE         = "defense";
+	case SPECIAL_ATTACK  = "special_attack";
+	case SPECIAL_DEFENSE = "special_defense";
+	case SPEED           = "speed";
 }

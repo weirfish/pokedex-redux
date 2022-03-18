@@ -2,7 +2,7 @@
 
 namespace PtuDex\Pokedex\Service\Search;
 
-class Terms extends \Engine\Abstracts\Enum
+enum Terms
 {
 	const NAME       = "name";
 	const TYPE       = "type";

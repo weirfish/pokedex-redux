@@ -2,7 +2,7 @@
 
 namespace PtuDex\Common\Enums;
 
-class MoveCategories extends \Engine\Abstracts\Enum
+enum MoveCategories : string
 {
 	const PREFIX    = "moveCategory";
 

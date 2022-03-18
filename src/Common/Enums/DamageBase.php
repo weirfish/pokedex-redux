@@ -2,37 +2,37 @@
 
 namespace PtuDex\Common\Enums;
 
-class DamageBase extends \Engine\Abstracts\Enum
+enum DamageBase : string
 {
-	const DB0  = "0";
-	const DB1  = "1d6+1";
-	const DB2  = "1d6+3";
-	const DB3  = "1d6+5";
-	const DB4  = "1d8+6";
-	const DB5  = "1d8+8";
-	const DB6  = "2d6+8";
-	const DB7  = "2d6+10";
-	const DB8  = "2d8+10";
-	const DB9  = "2d10+10";
-	const DB10 = "3d8+10";
-	const DB11 = "3d10+10";
-	const DB12 = "3d12+10";
-	const DB13 = "4d10+10";
-	const DB14 = "4d10+15";
-	const DB15 = "4d10+20";
-	const DB16 = "5d10+20";
-	const DB17 = "5d12+25";
-	const DB18 = "6d12+25";
-	const DB19 = "6d12+30";
-	const DB20 = "6d12+35";
-	const DB21 = "6d12+40";
-	const DB22 = "6d12+45";
-	const DB23 = "6d12+50";
-	const DB24 = "6d12+55";
-	const DB25 = "6d12+60";
-	const DB26 = "7d12+65";
-	const DB27 = "8d12+70";
-	const DB28 = "8d12+80";
+	case DB0  = "0";
+	case DB1  = "1d6+1";
+	case DB2  = "1d6+3";
+	case DB3  = "1d6+5";
+	case DB4  = "1d8+6";
+	case DB5  = "1d8+8";
+	case DB6  = "2d6+8";
+	case DB7  = "2d6+10";
+	case DB8  = "2d8+10";
+	case DB9  = "2d10+10";
+	case DB10 = "3d8+10";
+	case DB11 = "3d10+10";
+	case DB12 = "3d12+10";
+	case DB13 = "4d10+10";
+	case DB14 = "4d10+15";
+	case DB15 = "4d10+20";
+	case DB16 = "5d10+20";
+	case DB17 = "5d12+25";
+	case DB18 = "6d12+25";
+	case DB19 = "6d12+30";
+	case DB20 = "6d12+35";
+	case DB21 = "6d12+40";
+	case DB22 = "6d12+45";
+	case DB23 = "6d12+50";
+	case DB24 = "6d12+55";
+	case DB25 = "6d12+60";
+	case DB26 = "7d12+65";
+	case DB27 = "8d12+70";
+	case DB28 = "8d12+80";
 
 	public static function getDamageBase(int $dbNumber) : string
 	{
@@ -46,10 +46,10 @@ class DamageBase extends \Engine\Abstracts\Enum
 
 	public static function getDbNumber(string $damageBase) : string
 	{
-		if(!self::isConstantValue($damageBase))
+		if($damageBase instanceof self)
 			throw new \LogicException("{$damageBase} is not supported");
 
-		$constants = self::getConstants();
+		$constants = self::cases();
 
 		/** @var \ReflectionClassConstant $constant */
 		foreach($constants as $key => $constant)

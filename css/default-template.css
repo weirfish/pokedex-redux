@@ -96,13 +96,13 @@ h1 {
 
 #home-button:hover {
   color: #444;
-  background-image: linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red);
+  background-image: linear-gradient(45deg, violet, violet, indigo, blue, green, yellow, orange, red, violet, violet);
   background-clip: text;
   color: transparent;
   -webkit-animation: rainbow_animation 4s linear infinite;
           animation: rainbow_animation 4s linear infinite;
   background-size: 1600% 100%;
-  -webkit-text-stroke: linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red);
+  -webkit-text-stroke: linear-gradient(45deg, violet, violet, indigo, blue, green, yellow, orange, red, violet, violet);
 }
 
 @-webkit-keyframes rainbow_animation {

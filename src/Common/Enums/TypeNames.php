@@ -2,7 +2,7 @@
 
 namespace PtuDex\Common\Enums;
 
-class TypeNames extends \Engine\Abstracts\Enum
+enum TypeNames : string
 {
 	const PREFIX   = "type";
 

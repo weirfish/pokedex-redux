@@ -2,7 +2,7 @@
 
 namespace PtuDex\Common\Enums;
 
-class SkillNames extends \Engine\Abstracts\Enum
+enum SkillNames : string
 {
 	const PREFIX               = "skill";
 
@@ -79,7 +79,7 @@ class SkillNames extends \Engine\Abstracts\Enum
 
 	protected static function isSkillFromCategory($val, $categorySkills) : bool
 	{
-		if(!static::isConstantValue($val))
+		if($val instanceof self)
 			throw new \Exception("Given value {$val} is not a skill.");
 
 		return in_array($val, $categorySkills);

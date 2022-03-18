@@ -2,7 +2,7 @@
 
 namespace PtuDex\Common\Enums;
 
-class MoveRangeTypes extends \Engine\Abstracts\Enum
+enum MoveRangeTypes : string
 {
 	const PREFIX              = "moveRangeTypes";
 
@@ -24,7 +24,7 @@ class MoveRangeTypes extends \Engine\Abstracts\Enum
 
 	public static function getRegexForType($type) : string
 	{
-		if(!self::isConstantValue($type))
+		if($type instanceof self)
 			throw new \LogicException("{$type} is not a valid move range type");
 
 		switch($type)
@@ -66,7 +66,7 @@ class MoveRangeTypes extends \Engine\Abstracts\Enum
 
 	public static function parseRangeStringForType($string)
 	{
-		foreach(self::getConstants() as $constant)
+		foreach(self::cases() as $constant)
 		{
 			if($constant === self::PREFIX)
 				continue;
